@@ -1731,4 +1731,15 @@ body {
     }
 }
 
+.arrows-container {
+    margin-top: 10px;
+}
 
+.arrow {
+    background: white;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 0 5px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 0px 0px 0 rgba(0,0,0,0.19);
+    border: 0.2px;
+  }

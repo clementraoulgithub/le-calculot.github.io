@@ -1,618 +1,470 @@
 <!DOCTYPE html>
 <html lang="fr-FR">
-  <head>
-    <meta charset="utf-8" />
-    <link type="text/css" rel="stylesheet" href="style.css"/>
-  </head>
-  <body>
-    <div id="wrapwrap" class="homepage o_header_overlay">
-      <a
-        class="o_skip_to_content btn btn-primary rounded-0 visually-hidden-focusable position-absolute start-0"
-        href="#wrap"
-        >Se rendre au contenu</a
-      >
-      <header
-        id="top"
-        data-anchor="true"
-        data-name="Header"
-        data-extra-items-toggle-aria-label="Bouton d&#39;éléments supplémentaires"
-        class="o_header_fixed"
-      >
-        <div class="container py-3 px-0">
-          <nav
-            data-name="Navbar"
-            aria-label="Main"
-            class="navbar navbar-expand-lg navbar-light o_colored_level o_cc o_full_border d-lg-block rounded-pill px-3 shadow-sm"
-          >
-            <div id="o_main_nav" class="o_main_nav container">
-              <a
-                data-name="Navbar Logo"
-                href="index.html"
-                class="navbar-brand logo me-4"
-              >
-                <span
-                  role="img"
-                  aria-label="Logo of le-calculot"
-                  title="le-calculot"
-                  ><img
-                    src="image/logo/logo.webp"
-                    class="img img-fluid"
-                    width="95"
-                    height="40"
-                    alt="le-calculot"
-                    loading="lazy"
-                /></span>
-              </a>
 
-              <ul
-                role="menu"
-                id="top_menu"
-                class="nav"
-              >
-                <li role="presentation" class="nav-item">
-                  <a role="menuitem" href="index.html" class="nav-link active">
-                    <span>Page d&#39;accueil</span>
-                  </a>
-                </li>
+<head>
+  <meta charset="utf-8" />
+  <link type="text/css" rel="stylesheet" href="style.css" />
+</head>
 
-                <li role="presentation" class="nav-item">
-                  <a role="menuitem" href="contactus.html" class="nav-link">
-                    <span>Contactez-nous</span>
-                  </a>
-                </li>
-              </ul>
+<body>
+  <div id="wrapwrap" class="homepage o_header_overlay">
+    <a class="o_skip_to_content btn btn-primary rounded-0 visually-hidden-focusable position-absolute start-0"
+      href="#wrap">Se rendre au contenu</a>
+    <header id="top" data-anchor="true" data-name="Header"
+      data-extra-items-toggle-aria-label="Bouton d&#39;éléments supplémentaires" class="o_header_fixed">
+      <div class="container py-3 px-0">
+        <nav data-name="Navbar" aria-label="Main"
+          class="navbar navbar-expand-lg navbar-light o_colored_level o_cc o_full_border d-lg-block rounded-pill px-3 shadow-sm">
+          <div id="o_main_nav" class="o_main_nav container">
+            <ul role="menu" id="top_menu" class="nav">
+              <li role="presentation" class="nav-item">
+                <a role="menuitem" href="index.html" class="nav-link active">
+                  <span>Page d&#39;accueil</span>
+                </a>
+              </li>
 
-              <ul
-                class="navbar-nav align-items-center gap-1 flex-wrap flex-shrink-0 justify-content-end ps-3"
-              >
-                <li
-                  data-name="Language Selector"
-                  class="o_header_language_selector"
-                ></li>
-              </ul>
-            </div>
-          </nav>
-          <nav
-            data-name="Navbar"
-            aria-label="Mobile"
-            class="navbar navbar-light o_colored_level o_cc o_header_mobile d-block d-lg-none d-none shadow-sm o_full_border mx-1 rounded-pill px-3"
-          >
-            <div class="o_main_nav container flex-wrap justify-content-between">
-              <a data-name="Navbar Logo" href="index.html" class="navbar-brand logo">
-                <span
-                  role="img"
-                  aria-label="Logo of le-calculot"
-                  title="le-calculot"
-                  ><img
-                    src="image/logo/logo.webp"
-                    class="img img-fluid"
-                    width="95"
-                    height="40"
-                    alt="le-calculot"
-                    loading="lazy"
-                /></span>
-              </a>
+              <li role="presentation" class="nav-item">
+                <a role="menuitem" href="contactus.html" class="nav-link">
+                  <span>Contactez-nous</span>
+                </a>
+              </li>
+            </ul>
 
-              <ul
-                class="o_header_mobile_buttons_wrap navbar-nav flex-row align-items-center gap-2 mb-0"
-              >
-                <li class="o_not_editable">
-                  <button
-                    class="nav-link btn me-auto p-2"
-                    type="button"
-                    data-bs-toggle="offcanvas"
-                    data-bs-target="#top_menu_collapse_mobile"
-                    aria-controls="top_menu_collapse_mobile"
-                    aria-expanded="false"
-                    aria-label="Basculer la navigation"
-                  >
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                </li>
-              </ul>
-              <div
-                id="top_menu_collapse_mobile"
-                class="offcanvas offcanvas-end o_navbar_mobile"
-              >
-                <div
-                  class="offcanvas-header justify-content-end o_not_editable"
-                >
-                  <button
-                    type="button"
-                    class="nav-link btn-close"
-                    data-bs-dismiss="offcanvas"
-                    aria-label="Fermer"
-                  ></button>
-                </div>
-                <div
-                  class="offcanvas-body d-flex flex-column justify-content-between h-100 w-100 pt-0"
-                >
-                  <ul class="navbar-nav">
-                    <ul
-                      role="menu"
-                      class="nav navbar-nav top_menu o_mega_menu_is_offcanvas mx-n3"
-                    >
-                      <li role="presentation" class="nav-item border-top px-0">
-                        <a
-                          role="menuitem"
-                          href="index.html"
-                          class="nav-link p-3 text-wrap active"
-                        >
-                          <span>Page d&#39;accueil</span>
-                        </a>
-                      </li>
+            <ul class="navbar-nav align-items-center gap-1 flex-wrap flex-shrink-0 justify-content-end ps-3">
+              <li data-name="Language Selector" class="o_header_language_selector"></li>
+            </ul>
+          </div>
+        </nav>
+        <nav data-name="Navbar" aria-label="Mobile"
+          class="navbar navbar-light o_colored_level o_cc o_header_mobile d-block d-lg-none d-none shadow-sm o_full_border mx-1 rounded-pill px-3">
+          <div class="o_main_nav container flex-wrap justify-content-between">
+            <a data-name="Navbar Logo" href="index.html" class="navbar-brand logo">
+              <span role="img" aria-label="Logo of le-calculot" title="le-calculot"><img src="image/logo/logo.webp"
+                  class="img img-fluid" width="95" height="40" alt="le-calculot" loading="lazy" /></span>
+            </a>
 
-                      <li
-                        role="presentation"
-                        class="nav-item border-top border-bottom px-0"
-                      >
-                        <a
-                          role="menuitem"
-                          href="/contactus"
-                          class="nav-link p-3 text-wrap"
-                        >
-                          <span>Contactez-nous</span>
-                        </a>
-                      </li>
-                    </ul>
+            <ul class="o_header_mobile_buttons_wrap navbar-nav flex-row align-items-center gap-2 mb-0">
+              <li class="o_not_editable">
+                <button class="nav-link btn me-auto p-2" type="button" data-bs-toggle="offcanvas"
+                  data-bs-target="#top_menu_collapse_mobile" aria-controls="top_menu_collapse_mobile"
+                  aria-expanded="false" aria-label="Basculer la navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              </li>
+            </ul>
+            <div id="top_menu_collapse_mobile" class="offcanvas offcanvas-end o_navbar_mobile">
+              <div class="offcanvas-header justify-content-end o_not_editable">
+                <button type="button" class="nav-link btn-close" data-bs-dismiss="offcanvas"
+                  aria-label="Fermer"></button>
+              </div>
+              <div class="offcanvas-body d-flex flex-column justify-content-between h-100 w-100 pt-0">
+                <ul class="navbar-nav">
+                  <ul role="menu" class="nav navbar-nav top_menu o_mega_menu_is_offcanvas mx-n3">
+                    <li role="presentation" class="nav-item border-top px-0">
+                      <a role="menuitem" href="index.html" class="nav-link p-3 text-wrap active">
+                        <span>Page d&#39;accueil</span>
+                      </a>
+                    </li>
+
+                    <li role="presentation" class="nav-item border-top border-bottom px-0">
+                      <a role="menuitem" href="/contactus" class="nav-link p-3 text-wrap">
+                        <span>Contactez-nous</span>
+                      </a>
+                    </li>
                   </ul>
-                  <ul class="navbar-nav gap-2 mt-3 w-100">
-                    <li
-                      data-name="Language Selector"
-                      class="o_header_language_selector"
-                    ></li>
-                  </ul>
-                </div>
+                </ul>
+                <ul class="navbar-nav gap-2 mt-3 w-100">
+                  <li data-name="Language Selector" class="o_header_language_selector"></li>
+                </ul>
               </div>
             </div>
-          </nav>
-        </div>
-      </header>
-      <main>
-        <div id="wrap" class="oe_structure focus-visible">
-          <section
-            class="s_kickoff o_cc o_cc5 s_parallax_no_overflow_hidden pb88 o_colored_level pt136 oe_img_bg o_bg_img_center"
-            data-scroll-background-ratio="1"
-            data-oe-shape-data="{&#34;shape&#34;:&#34;web_editor/Connections/06&#34;,&#34;colors&#34;:{&#34;c5&#34;:&#34;#FFFFFF&#34;},&#34;flip&#34;:[],&#34;showOnMobile&#34;:true,&#34;shapeAnimationSpeed&#34;:&#34;0&#34;}"
-            style="
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div id="wrap" class="oe_structure focus-visible">
+        <section
+          class="s_kickoff o_cc o_cc5 s_parallax_no_overflow_hidden pb88 o_colored_level pt136 oe_img_bg o_bg_img_center"
+          data-scroll-background-ratio="1"
+          data-oe-shape-data="{&#34;shape&#34;:&#34;web_editor/Connections/06&#34;,&#34;colors&#34;:{&#34;c5&#34;:&#34;#FFFFFF&#34;},&#34;flip&#34;:[],&#34;showOnMobile&#34;:true,&#34;shapeAnimationSpeed&#34;:&#34;0&#34;}"
+          style="
               background-position: 100% 100%;
               background-image: url(&#34;image/top-image/top.webp&#34;) !important;
-            "
-            data-snippet="s_kickoff"
-            data-mimetype="image/webp"
-            data-original-id="422"
-            data-original-src="/web/image/422-c2e37428/intro.webp"
-            data-mimetype-before-conversion="image/webp"
-            data-resize-width="1440"
-            data-quality="100"
-          >
-            <div class="o_we_bg_filter bg-black-50"></div>
-            <div
-              class="o_we_shape o_web_editor_Connections_06 o_header_extra_shape_mapping o_shape_show_mobile"
-              style="
+            " data-snippet="s_kickoff" data-mimetype="image/webp" data-original-id="422"
+          data-original-src="/web/image/422-c2e37428/intro.webp" data-mimetype-before-conversion="image/webp"
+          data-resize-width="1440" data-quality="100">
+          <div class="o_we_bg_filter bg-black-50"></div>
+          <div class="o_we_shape o_web_editor_Connections_06 o_header_extra_shape_mapping o_shape_show_mobile" style="
                 background-image: url(&#34;image/fx/connections3.svg?c5=%23FFFFFF&#34;);
-              "
-            ></div>
+              "></div>
 
-            <div class="container">
-              <p class="lead">
-                &nbsp;Bienvenue sur la page du <strong>Calculot</strong><br />
-              </p>
-              <h1 class="display-1">
-                Location de biens immobiliers&nbsp;&nbsp;<br />
-              </h1>
-            </div>
-          </section>
-          <section
-            class="s_key_images o_cc o_cc2 o_colored_level pt40 pb16"
-            data-snippet="s_key_images"
-            data-name="Images clés"
-            id="D%C3%A9couvrez-nos-logements"
-            data-anchor="true"
-            style="position: relative"
-            data-oe-shape-data="{&#34;shape&#34;:&#34;web_editor/Connections/12&#34;,&#34;colors&#34;:{&#34;c5&#34;:&#34;#E0CCAF&#34;},&#34;flip&#34;:[],&#34;showOnMobile&#34;:true,&#34;shapeAnimationSpeed&#34;:&#34;0&#34;}"
-          >
-            <div
-              class="o_we_shape o_web_editor_Connections_12 o_shape_show_mobile"
-              style="
+          <div class="container">
+            <p class="lead">
+              &nbsp;Bienvenue sur la page du <strong>Calculot</strong><br />
+            </p>
+            <h1 class="display-1">
+              Location de biens immobiliers&nbsp;&nbsp;<br />
+            </h1>
+          </div>
+        </section>
+        <section class="s_key_images o_cc o_cc2 o_colored_level pt40 pb16" data-snippet="s_key_images"
+          data-name="Images clés" id="D%C3%A9couvrez-nos-logements" data-anchor="true" style="position: relative"
+          data-oe-shape-data="{&#34;shape&#34;:&#34;web_editor/Connections/12&#34;,&#34;colors&#34;:{&#34;c5&#34;:&#34;#E0CCAF&#34;},&#34;flip&#34;:[],&#34;showOnMobile&#34;:true,&#34;shapeAnimationSpeed&#34;:&#34;0&#34;}">
+          <div class="o_we_shape o_web_editor_Connections_12 o_shape_show_mobile" style="
                 background-image: url(&#34;image/fx/connections2.svg&#34;);
-              "
-            ></div>
-            <div class="container">
-              <div class="row s_nb_column_fixed">
-                <div class="col-lg-12 pb32 o_colored_level">
-                  <h2>Découvrez nos&nbsp;logements</h2>
-                  <p class="lead">
-                    Découvrez de nouvelles régions&nbsp;dans les meilleurs
-                    conditions.
-                  </p>
-                </div>
+              "></div>
+          <div class="container">
+            <div class="row s_nb_column_fixed">
+              <div class="col-lg-12 pb32 o_colored_level">
+                <h2>Découvrez nos&nbsp;logements</h2>
+                <p class="lead">
+                  Découvrez de nouvelles régions&nbsp;dans les meilleurs
+                  conditions.
+                </p>
               </div>
             </div>
-          </section>
-          <section
-            class="s_call_to_action o_cc o_cc5 o_colored_level pt8 pb8"
-            data-snippet="s_call_to_action"
-            data-name="Appel à l&#39;action"
-          >
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-9 o_colored_level">
-                  <h3>
-                    &nbsp;<a
-                      href="https://www.airbnb.fr/rooms/1160899826600585254?guests=1&amp;adults=1&amp;s=67&amp;unique_share_id=d4d04081-bfa3-41c7-bb94-7b516c5217f7"
-                      >Appartement Perros-Guirec</a
-                    >
-                  </h3>
-                  <p>Studio vue mer - 2 visiteurs</p>
-                </div>
+          </div>
+        </section>
+        <section class="s_call_to_action o_cc o_cc5 o_colored_level pt8 pb8" data-snippet="s_call_to_action"
+          data-name="Appel à l&#39;action">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-9 o_colored_level">
+                <h3>
+                  &nbsp;<a
+                    href="https://www.airbnb.fr/rooms/1160899826600585254?guests=1&amp;adults=1&amp;s=67&amp;unique_share_id=d4d04081-bfa3-41c7-bb94-7b516c5217f7">Appartement
+                    Perros-Guirec</a>
+                </h3>
+                <p>Studio vue mer - 2 visiteurs</p>
               </div>
             </div>
-          </section>
-          <section
-            class="s_embed_code o_colored_level pt48 pb80 text-start"
-            data-snippet="s_embed_code"
-            data-name="Code intégré"
-            style="position: relative"
-            data-oe-shape-data="{&#34;shape&#34;:&#34;web_editor/Connections/02&#34;,&#34;colors&#34;:{&#34;c5&#34;:&#34;#E0CCAF&#34;},&#34;flip&#34;:[],&#34;showOnMobile&#34;:true,&#34;shapeAnimationSpeed&#34;:&#34;0&#34;}"
-          >
-            <div
-              class="o_we_shape o_web_editor_Connections_02 o_shape_show_mobile"
-              style="
+          </div>
+        </section>
+        <section class="s_embed_code o_colored_level pt48 pb80 text-start" data-snippet="s_embed_code"
+          data-name="Code intégré" style="position: relative"
+          data-oe-shape-data="{&#34;shape&#34;:&#34;web_editor/Connections/02&#34;,&#34;colors&#34;:{&#34;c5&#34;:&#34;#E0CCAF&#34;},&#34;flip&#34;:[],&#34;showOnMobile&#34;:true,&#34;shapeAnimationSpeed&#34;:&#34;0&#34;}">
+          <div class="o_we_shape o_web_editor_Connections_02 o_shape_show_mobile" style="
                 background-image: url(&#34;image/fx/connections1.svg&#34;);
-              "
-            ></div>
-            <div class="s_embed_code_embedded o_not_editable container-fluid">
-              <meta charset="UTF-8" /><meta
-                name="viewport"
-                content="width=device-width, initial-scale=1.0"
-              /><title>Avis Airbnb</title
-              ><style>
-                /* Section Airbnb */
-                .airbnb-section {
+              "></div>
+          <div class="s_embed_code_embedded o_not_editable container-fluid">
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Avis Airbnb</title>
+            <style>
+              /* Section Airbnb */
+              .airbnb-section {
+                display: flex;
+                flex-direction: column;
+                max-width: 1000px;
+                width: 100%;
+                margin: auto;
+              }
+
+              /* Conteneur principal */
+              .airbnb-content {
+                display: flex;
+                gap: 20px;
+              }
+
+              /* Airbnb embed à gauche (2/3 de la largeur) */
+              .airbnb-embed {
+                flex: 2;
+                max-width: 66%;
+              }
+
+              /* Avis à droite (1/3 de la largeur) */
+              .reviews-container {
+                flex: 1;
+                max-width: 33%;
+              }
+
+              /* Avis */
+              .review-card {
+                background: white;
+                border-radius: 10px;
+                padding: 25px;
+                margin-bottom: 25px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                opacity: 0;
+                transform: translateY(20px);
+                transition: all 0.5s ease-in-out;
+              }
+
+              .review-card.visible {
+                opacity: 1;
+                transform: translateY(0);
+              }
+
+              .review-header {
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+              }
+
+              .review-header img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                margin-right: 10px;
+              }
+
+              .review-name {
+                font-weight: bold;
+                flex-grow: 1;
+              }
+
+              .stars {
+                color: gold;
+                font-size: 16px;
+              }
+
+              .review-text {
+                font-size: 14px;
+                color: #555;
+              }
+
+              /* Section Caractéristiques */
+              .features {
                   display: flex;
-                  flex-direction: column;
-                  max-width: 1000px;
-                  width: 100%;
-                  margin: auto;
-                }
-
-                /* Conteneur principal */
-                .airbnb-content {
-                  display: flex;
-                  gap: 20px;
-                }
-
-                /* Airbnb embed à gauche (2/3 de la largeur) */
-                .airbnb-embed {
-                  flex: 2;
-                  max-width: 66%;
-                }
-
-                /* Avis à droite (1/3 de la largeur) */
-                .reviews-container {
-                  flex: 1;
-                  max-width: 33%;
-                }
-
-                /* Avis */
-                .review-card {
-                  background: white;
-                  border-radius: 10px;
-                  padding: 25px;
-                  margin-bottom: 25px;
-                  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                  opacity: 0;
-                  transform: translateY(20px);
-                  transition: all 0.5s ease-in-out;
-                }
-
-                .review-card.visible {
-                  opacity: 1;
-                  transform: translateY(0);
-                }
-
-                .review-header {
-                  display: flex;
-                  align-items: center;
-                  margin-bottom: 10px;
-                }
-
-                .review-header img {
-                  width: 40px;
-                  height: 40px;
-                  border-radius: 50%;
-                  margin-right: 10px;
-                }
-
-                .review-name {
-                  font-weight: bold;
-                  flex-grow: 1;
-                }
-
-                .stars {
-                  color: gold;
-                  font-size: 16px;
-                }
-
-                .review-text {
-                  font-size: 14px;
-                  color: #555;
-                }
-
-                /* Section Caractéristiques */
-                .features {
-                  display: flex;
-                  flex-direction: column;
+                  flex-wrap: wrap;
                   gap: 15px;
                   margin-top: 30px;
                   padding: 20px;
                   background: #f9f9f9;
                   border-radius: 10px;
-                }
+                  justify-content: space-between;
+              }
 
-                .feature {
+              .feature-group {
+                  display: flex;
+                  gap: 15px;
+                  width: 100%;
+                  justify-content: space-between;
+              }
+
+              .feature {
                   display: flex;
                   align-items: center;
                   gap: 10px;
-                }
+                  flex: 1;
+                  min-width: 200px;
+              }
 
-                .feature svg {
+              .feature svg {
                   width: 24px;
                   height: 24px;
                   fill: #ff385c;
+              }
+
+              /* Responsive */
+              @media (max-width: 768px) {
+                .airbnb-content {
+                  flex-direction: column;
+                  align-items: center;
                 }
 
-                /* Responsive */
-                @media (max-width: 768px) {
-                  .airbnb-content {
-                    flex-direction: column;
-                    align-items: center;
-                  }
-
-                  .airbnb-embed,
-                  .reviews-container {
-                    max-width: 100%;
-                  }
+                .airbnb-embed,
+                .reviews-container {
+                  max-width: 100%;
                 }
-              </style>
-              <div class="airbnb-section">
-                <div class="airbnb-content">
-                  <div class="airbnb-embed">
-                    <div class="airbnb-embed-frame" id="airbnb_1" data-view="home" data-hide-price="true" style="width: 100%; height: 300px;">
-                    </div>
-                    <div class="airbnb-embed-frame" id="airbnb_2" data-view="home" data-hide-price="true" style="width: 100%; height: 300px;">
-                    </div>
-                    <div class="airbnb-embed-frame" id="airbnb_3" data-view="home" data-hide-price="true" style="width: 100%; height: 300px;">
-                    </div>
+              }
+            </style>
+            <div class="airbnb-section">
+              <div class="airbnb-content">
+                <div class="airbnb-embed">
+                  <div class="airbnb-embed-frame" id="airbnb_1" data-view="home" data-hide-price="true"
+                    style="width: 100%; height: 300px;">
                   </div>
-                  <div class="reviews-container" id="reviews"></div>
+                  <div class="airbnb-embed-frame" id="airbnb_2" data-view="home" data-hide-price="true"
+                    style="width: 100%; height: 300px;">
+                  </div>
+                  <div class="airbnb-embed-frame" id="airbnb_3" data-view="home" data-hide-price="true"
+                    style="width: 100%; height: 300px;">
+                  </div>
+                  <div class="arrows-container">
+                    <button id="prevArrow" class="arrow">←</button>
+                    <button id="nextArrow" class="arrow">→</button>
+                  </div>
+                </div>
+                <div class="reviews-container" id="reviews"></div>
+              </div>
+
+              <div class="features">
+                <div class="feature-group">
+                  <div class="feature">
+                    <svg viewbox="0 0 24 24">
+                      <path d="M12 2L15 8.5L22 9.5L17 14.5L18.5 21L12 17.5L5.5 21L7 14.5L2 9.5L9 8.5L12 2Z"></path>
+                    </svg>
+                    <span>À 3 minutes à pied de la plage - Plage de Trestraou</span>
+                  </div>
+                  <div class="feature">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M3.15452 1.01195C5.11987 1.32041 7.17569 2.2474 8.72607 3.49603C9.75381 3.17407 10.8558 2.99995 12 2.99995C13.1519 2.99995 14.261 3.17641 15.2946 3.5025C16.882 2.27488 18.8427 1.31337 20.8354 1.01339C21.2596 0.95092 21.7008 1.16534 21.8945 1.55273C22.6719 3.38958 22.6983 5.57987 22.2202 7.49248L22.2128 7.52213C22.0847 8.03536 21.9191 8.69868 21.3876 8.92182C21.7827 9.89315 22 10.9466 22 12.0526C22 14.825 20.8618 17.6774 19.8412 20.2348L19.8412 20.2348L19.7379 20.4936C19.1182 22.0486 17.7316 23.1196 16.125 23.418L13.8549 23.8397C13.1549 23.9697 12.4562 23.7172 12 23.2082C11.5438 23.7172 10.8452 23.9697 10.1452 23.8397L7.87506 23.418C6.26852 23.1196 4.88189 22.0486 4.26214 20.4936L4.15891 20.2348C3.13833 17.6774 2.00004 14.825 2.00004 12.0526C2.00004 10.9466 2.21737 9.89315 2.6125 8.92182C2.08046 8.69845 1.91916 8.05124 1.7909 7.53658L1.7799 7.49248C1.32311 5.66527 1.23531 3.2968 2.10561 1.55273C2.29827 1.16741 2.72906 0.945855 3.15452 1.01195ZM6.58478 4.44052C5.45516 5.10067 4.47474 5.9652 3.71373 6.98132C3.41572 5.76461 3.41236 4.41153 3.67496 3.18754C4.68842 3.48029 5.68018 3.89536 6.58478 4.44052ZM20.2863 6.98133C19.5303 5.97184 18.5577 5.11195 17.4374 4.45347C18.3364 3.9005 19.3043 3.45749 20.3223 3.17455C20.5884 4.40199 20.5853 5.76068 20.2863 6.98133ZM8.85364 5.56694C9.81678 5.20285 10.8797 4.99995 12 4.99995C13.1204 4.99995 14.1833 5.20285 15.1464 5.56694C18.0554 6.66661 20 9.1982 20 12.0526C20 14.4676 18.9891 16.9876 18.0863 19.238L18.0862 19.2382C18.0167 19.4115 17.9478 19.5832 17.8801 19.7531C17.5291 20.6338 16.731 21.2712 15.7597 21.4516L13.4896 21.8733L12.912 20.5896C12.7505 20.2307 12.3935 19.9999 12 19.9999C11.6065 19.9999 11.2496 20.2307 11.0881 20.5896L10.5104 21.8733L8.24033 21.4516C7.26908 21.2712 6.471 20.6338 6.12001 19.7531C6.05237 19.5834 5.98357 19.4119 5.91414 19.2388L5.91395 19.2384L5.91381 19.238C5.01102 16.9876 4.00004 14.4676 4.00004 12.0526C4.00004 9.1982 5.94472 6.66661 8.85364 5.56694ZM10.5 15.9999C10.1212 15.9999 9.77497 16.2139 9.60557 16.5527C9.43618 16.8915 9.47274 17.2969 9.7 17.5999L11.2 19.5999C11.3889 19.8517 11.6852 19.9999 12 19.9999C12.3148 19.9999 12.6111 19.8517 12.8 19.5999L14.3 17.5999C14.5273 17.2969 14.5638 16.8915 14.3944 16.5527C14.225 16.2139 13.8788 15.9999 13.5 15.9999H10.5ZM9.62134 11.1212C9.62134 11.9497 8.94977 12.6212 8.12134 12.6212C7.29291 12.6212 6.62134 11.9497 6.62134 11.1212C6.62134 10.2928 7.29291 9.62125 8.12134 9.62125C8.94977 9.62125 9.62134 10.2928 9.62134 11.1212ZM16 12.4999C16.8284 12.4999 17.5 11.8284 17.5 10.9999C17.5 10.1715 16.8284 9.49994 16 9.49994C15.1716 9.49994 14.5 10.1715 14.5 10.9999C14.5 11.8284 15.1716 12.4999 16 12.4999Z"
+                          fill="#000000"></path>
+                      </g>
+                    </svg>
+                    <span>Animaux acceptés</span>
+                  </div>
                 </div>
 
-
-                <div class="features">
-                  <div class="feature">
-                    <svg viewbox="0 0 24 24">
-                      <path
-                        d="M12 2L15 8.5L22 9.5L17 14.5L18.5 21L12 17.5L5.5 21L7 14.5L2 9.5L9 8.5L12 2Z"
-                      ></path>
-                    </svg>
-                    <span
-                      >À 3 minutes à pied de la plage - Plage de Trestraou</span
-                    >
-                  </div>
-
-                  <div class="feature">
-                    <svg viewbox="0 0 24 24">
-                      <path
-                        d="M12 2L15 8.5L22 9.5L17 14.5L18.5 21L12 17.5L5.5 21L7 14.5L2 9.5L9 8.5L12 2Z"
-                      ></path>
-                    </svg>
-                    <span>Arrivée autonome avec boîte à clé sécurisée</span>
-                  </div>
-
-                  <div class="feature">
-                    <svg viewbox="0 0 24 24">
-                      <path
-                        d="M12 2L15 8.5L22 9.5L17 14.5L18.5 21L12 17.5L5.5 21L7 14.5L2 9.5L9 8.5L12 2Z"
-                      ></path>
-                    </svg>
-                    <span
-                      >Environnement magnifique et emplacement pittoresque</span
-                    >
-                  </div>
+                <div class="feature-group">
+                <div class="feature">
+                  <svg viewbox="0 0 24 24">
+                    <path d="M12 2L15 8.5L22 9.5L17 14.5L18.5 21L12 17.5L5.5 21L7 14.5L2 9.5L9 8.5L12 2Z"></path>
+                  </svg>
+                  <span>Arrivée autonome avec boîte à clé sécurisée</span>
+                </div>
+                <div class="feature">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M11 6C9.34315 6 8 7.34315 8 9V17C8 17.5523 8.44772 18 9 18C9.55229 18 10 17.5523 10 17V14L12.0045 14C12.2149 13.9987 12.426 13.974 12.6332 13.9395C12.9799 13.8817 13.4575 13.7642 13.9472 13.5194C14.4409 13.2725 14.9649 12.8866 15.3633 12.289C15.7659 11.6851 16 10.9249 16 9.99996C16 9.07499 15.7659 8.31478 15.3633 7.71092C14.9649 7.11332 14.4408 6.7274 13.9472 6.48058C13.4575 6.23573 12.9799 6.11828 12.6332 6.06049C12.4248 6.02575 12.2117 6.0001 12 6H11ZM10 12V9C10 8.44772 10.4477 8 11 8L12.0004 8.00018C12.3603 8.01218 12.7318 8.10893 13.0528 8.26944C13.3092 8.39762 13.5351 8.5742 13.6992 8.82033C13.8591 9.06021 14 9.42497 14 9.99996C14 10.575 13.8591 10.9397 13.6992 11.1796C13.5351 11.4258 13.3091 11.6023 13.0528 11.7305C12.7318 11.891 12.3603 11.9878 12.0003 11.9998L10 12Z"
+                        fill="#0F0F0F"></path>
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20Z"
+                        fill="#0F0F0F"></path>
+                    </g>
+                  </svg>
+                  <span>Parking gratuit sur place</span>
                 </div>
               </div>
+
+              <div class="feature">
+                <svg viewbox="0 0 24 24">
+                  <path d="M12 2L15 8.5L22 9.5L17 14.5L18.5 21L12 17.5L5.5 21L7 14.5L2 9.5L9 8.5L12 2Z"></path>
+                </svg>
+                <span>Environnement magnifique et emplacement pittoresque</span>
+              </div>
             </div>
-          </section>
-          <section
-            class="s_process_steps s_process_steps_connector_line o_cc5 o_colored_level pt8 pb16"
-            data-vcss="002"
-            data-vxml="002"
-            data-snippet="s_process_steps"
-            data-name="Étapes"
-          >
-            <svg class="s_process_step_svg_defs position-absolute">
-              <defs>
-                <marker
-                  class="s_process_steps_arrow_head"
-                  markerwidth="15"
-                  markerheight="10"
-                  refx="6"
-                  refy="6"
-                  orient="auto"
-                >
-                  <path
-                    d="M 2,2 L10,6 L2,10 L6,6 L2,2"
-                    vector-effect="non-scaling-size"
-                  ></path>
-                </marker>
-              </defs>
-            </svg>
-            <div class="container">
-              <h2 class="mb-4 text-center h3-fs">Comment réserver ?</h2>
-              <div class="row g-0">
-                <div
-                  class="s_process_step position-relative pt24 pb24 o_colored_level col-lg-12"
-                >
-                  <svg
-                    class="s_process_step_connector position-absolute z-index-1"
-                    viewbox="0 0 578 80"
-                    preserveaspectratio="none"
-                    style="
+          </div>
+      </div>
+      </section>
+      <section class="s_process_steps s_process_steps_connector_line o_cc5 o_colored_level pt8 pb16" data-vcss="002"
+        data-vxml="002" data-snippet="s_process_steps" data-name="Étapes">
+        <svg class="s_process_step_svg_defs position-absolute">
+          <defs>
+            <marker class="s_process_steps_arrow_head" markerwidth="15" markerheight="10" refx="6" refy="6"
+              orient="auto">
+              <path d="M 2,2 L10,6 L2,10 L6,6 L2,2" vector-effect="non-scaling-size"></path>
+            </marker>
+          </defs>
+        </svg>
+        <div class="container">
+          <h2 class="mb-4 text-center h3-fs">Comment réserver ?</h2>
+          <div class="row g-0">
+            <div class="s_process_step position-relative pt24 pb24 o_colored_level col-lg-12">
+              <svg class="s_process_step_connector position-absolute z-index-1" viewbox="0 0 578 80"
+                preserveaspectratio="none" style="
                       left: calc(50% + 56px);
                       height: 80px;
                       width: calc(100% - 112px);
                       margin-top: 0px;
                       transform: unset;
-                    "
-                  >
-                    <path
-                      d="M 0 40 L 578 40"
-                      vector-effect="non-scaling-stroke"
-                    ></path>
-                  </svg>
+                    ">
+                <path d="M 0 40 L 578 40" vector-effect="non-scaling-stroke"></path>
+              </svg>
 
-                  <div class="s_process_step_content mt-3 px-3 text-center">
-                    <h3 class="h4-fs">
-                      Réserver&nbsp;directement sur
-                      <a
-                        href="https://www.airbnb.fr/rooms/1160899826600585254?guests=1&amp;adults=1&amp;s=67&amp;unique_share_id=c0891835-2a67-41b3-9db3-ee15bff0e334"
-                        target="_blank"
-                        >Airbnb</a
-                      >
-                    </h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section
-            class="s_company_team_basic o_cc o_cc2 o_colored_level pb0 pt48"
-            data-snippet="s_company_team_basic"
-            data-name="Équipe de base"
-          >
-            <div class="container">
-              <div class="row o_grid_mode" data-row-count="10">
-                <div
-                  class="o_grid_item g-col-lg-12 g-height-2 col-lg-12 o_colored_level"
-                  style="
-                    grid-area: 1 / 1 / 3 / 13;
-                    --grid-item-padding-y: 32px;
-                    --grid-item-padding-x: 32px;
-                    z-index: 1;
-                  "
-                >
-                  <h2 style="text-align: center">Qui sommes nous ?</h2>
-                </div>
-
-                <div
-                  class="o_grid_item g-col-6 g-col-lg-3 g-height-8 col-6 col-lg-3 o_colored_level"
-                  data-name="Team Member"
-                  style="
-                    --grid-item-padding-y: 16px;
-                    --grid-item-padding-x: 32px;
-                    z-index: 3;
-                    grid-area: 3 / 8 / 11 / 11;
-                  "
-                >
-                  <p class="o_not_editable" style="text-align: center">
-                    <img
-                      src="image/av1-image/clement-raoul.webp"
-                      alt=""
-                      class="o_editable_media img-fluid rounded-circle img o_we_custom_image"
-                      style="width: 100% !important"
-                      data-mimetype="image/webp"
-                      data-original-id="428"
-                      data-original-src="/web/image/428-ea93d552/Cle%CC%81ment%20Raoul.jpeg"
-                      data-mimetype-before-conversion="image/jpeg"
-                      data-resize-width="690"
-                      loading="lazy"
-                    />
-                  </p>
-                  <h4 class="h5-fs" style="text-align: center">
-                    &nbsp;Clément RAOUL<br />
-                  </h4>
-                  <p class="o_small-fs text-muted" style="text-align: center">
-                    Co-gérant&nbsp;<br />
-                  </p>
-                </div>
-                <div
-                  class="o_grid_item g-col-6 g-col-lg-3 g-height-8 col-6 col-lg-3 o_colored_level"
-                  data-name="Team Member"
-                  style="
-                    --grid-item-padding-y: 16px;
-                    --grid-item-padding-x: 32px;
-                    z-index: 2;
-                    grid-area: 3 / 3 / 11 / 6;
-                  "
-                >
-                  <p class="o_not_editable" style="text-align: center">
-                    <img
-                      src="image/av2-image/quentin-raoul.webp"
-                      alt=""
-                      class="o_editable_media img-fluid rounded-circle img o_we_custom_image"
-                      style="width: 100% !important"
-                      data-mimetype="image/webp"
-                      data-original-id="427"
-                      data-original-src="/web/image/427-db8df412/7bc1029b-1db1-40c5-be5b-9a66b9a8b551.jpeg"
-                      data-mimetype-before-conversion="image/jpeg"
-                      data-resize-width="240"
-                      loading="lazy"
-                    />
-                  </p>
-                  <h4 class="h5-fs" style="text-align: center">
-                    &nbsp;Quentin RAOUL<br />
-                  </h4>
-                  <p class="o_small-fs text-muted" style="text-align: center">
-                    Gérant&nbsp;<br />
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-
-        <div id="o_shared_blocks" class="oe_unremovable"></div>
-      </main>
-      <footer
-        id="bottom"
-        data-anchor="true"
-        data-name="Footer"
-        class="o_footer o_colored_level o_cc"
-      >
-        <div id="footer" class="oe_structure oe_structure_solo"></div>
-        <div
-          id="o_footer_scrolltop_wrapper"
-          class="container h-0 d-flex align-items-center justify-content-center"
-        >
-          <a
-            id="o_footer_scrolltop"
-            role="button"
-            href="#top"
-            title="Faire défiler vers le haut"
-            class="btn btn-primary rounded-circle d-flex align-items-center justify-content-center"
-          >
-            <span class="oi fa-1x oi-chevron-up"></span>
-          </a>
-        </div>
-        <div
-          class="o_footer_copyright o_colored_level o_cc"
-          data-name="Copyright"
-        >
-          <div class="container py-3">
-            <div class="row">
-              <div class="col-sm text-center text-sm-start text-muted">
-                <span class="o_footer_copyright_name me-2"
-                  >Copyright ©&nbsp;Le calculot</span
-                >
-              </div>
+              <div class="s_process_step_content mt-3 px-3 text-center">
+                <h3 class="h4-fs">
+                  Réserver&nbsp;directement sur
+                  <a href="https://www.airbnb.fr/rooms/1160899826600585254?guests=1&amp;adults=1&amp;s=67&amp;unique_share_id=c0891835-2a67-41b3-9db3-ee15bff0e334"
+                    target="_blank">Airbnb</a>
+                </h3>
               </div>
             </div>
           </div>
         </div>
-      </footer>
+      </section>
+      <section class="s_company_team_basic o_cc o_cc2 o_colored_level pb0 pt48" data-snippet="s_company_team_basic"
+        data-name="Équipe de base">
+        <div class="container">
+          <div class="row o_grid_mode" data-row-count="10">
+            <div class="o_grid_item g-col-lg-12 g-height-2 col-lg-12 o_colored_level" style="
+                    grid-area: 1 / 1 / 3 / 13;
+                    --grid-item-padding-y: 32px;
+                    --grid-item-padding-x: 32px;
+                    z-index: 1;
+                  ">
+              <h2 style="text-align: center">Qui sommes nous ?</h2>
+            </div>
+
+            <div class="o_grid_item g-col-6 g-col-lg-3 g-height-8 col-6 col-lg-3 o_colored_level"
+              data-name="Team Member" style="
+                    --grid-item-padding-y: 16px;
+                    --grid-item-padding-x: 32px;
+                    z-index: 3;
+                    grid-area: 3 / 8 / 11 / 11;
+                  ">
+              <p class="o_not_editable" style="text-align: center">
+                <img src="image/av1-image/clement-raoul.webp" alt=""
+                  class="o_editable_media img-fluid rounded-circle img o_we_custom_image" style="width: 100% !important"
+                  data-mimetype="image/webp" data-original-id="428"
+                  data-original-src="/web/image/428-ea93d552/Cle%CC%81ment%20Raoul.jpeg"
+                  data-mimetype-before-conversion="image/jpeg" data-resize-width="690" loading="lazy" />
+              </p>
+              <h4 class="h5-fs" style="text-align: center">
+                &nbsp;Clément RAOUL<br />
+              </h4>
+              <p class="o_small-fs text-muted" style="text-align: center">
+                Co-gérant&nbsp;<br />
+              </p>
+            </div>
+            <div class="o_grid_item g-col-6 g-col-lg-3 g-height-8 col-6 col-lg-3 o_colored_level"
+              data-name="Team Member" style="
+                    --grid-item-padding-y: 16px;
+                    --grid-item-padding-x: 32px;
+                    z-index: 2;
+                    grid-area: 3 / 3 / 11 / 6;
+                  ">
+              <p class="o_not_editable" style="text-align: center">
+                <img src="image/av2-image/quentin-raoul.webp" alt=""
+                  class="o_editable_media img-fluid rounded-circle img o_we_custom_image" style="width: 100% !important"
+                  data-mimetype="image/webp" data-original-id="427"
+                  data-original-src="/web/image/427-db8df412/7bc1029b-1db1-40c5-be5b-9a66b9a8b551.jpeg"
+                  data-mimetype-before-conversion="image/jpeg" data-resize-width="240" loading="lazy" />
+              </p>
+              <h4 class="h5-fs" style="text-align: center">
+                &nbsp;Quentin RAOUL<br />
+              </h4>
+              <p class="o_small-fs text-muted" style="text-align: center">
+                Gérant&nbsp;<br />
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+  </div>
+
+  <div id="o_shared_blocks" class="oe_unremovable"></div>
+  </main>
+  <footer id="bottom" data-anchor="true" data-name="Footer" class="o_footer o_colored_level o_cc">
+    <div id="footer" class="oe_structure oe_structure_solo"></div>
+    <div id="o_footer_scrolltop_wrapper" class="container h-0 d-flex align-items-center justify-content-center">
+      <a id="o_footer_scrolltop" role="button" href="#top" title="Faire défiler vers le haut"
+        class="btn btn-primary rounded-circle d-flex align-items-center justify-content-center">
+        <span class="oi fa-1x oi-chevron-up"></span>
+      </a>
     </div>
-    <script type="text/javascript" src="rates.js" defer></script>
-  </body>
+    <div class="o_footer_copyright o_colored_level o_cc" data-name="Copyright">
+      <div class="container py-3">
+        <div class="row">
+          <div class="col-sm text-center text-sm-start text-muted">
+            <span class="o_footer_copyright_name me-2">Copyright ©&nbsp;Le calculot</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </footer>
+  </div>
+  <script type="text/javascript" src="rates.js" defer></script>
+</body>
+
 </html>

@@ -100,14 +100,13 @@ function loadAirbnbScript() {
     // Montrer l'élément suivant en fonction de l'index
     if (currentIndex === 1) {
         document.getElementById('airbnb_2').style.display = 'block';
-        currentIndex = 2;
     } else if (currentIndex === 2) {
         document.getElementById('airbnb_3').style.display = 'block';
-        currentIndex = 3;
     } else if (currentIndex === 3) {
         document.getElementById('airbnb_1').style.display = 'block';
-        currentIndex = 1;
     }
+
+    displayReviews();
 }
 
 const loadScript = (src, name) => {
@@ -123,41 +122,41 @@ const loadScript = (src, name) => {
 };
 
 function updateAirbnbListing() {
-    const listing = airbnbListings[currentListingIndex];
-
-    // Cibler tous les éléments avec la classe 'airbnb-embed-frame'
     const airbnbEmbeds = document.querySelectorAll('.airbnb-embed-frame');
 
-    airbnbEmbeds.forEach(airbnbEmbed => {
-        // Mettre à jour les attributs de données pour chaque élément embed
+    const numListings = airbnbListings.length;
+    const numEmbeds = airbnbEmbeds.length;
+
+    for (let i = 0; i < numEmbeds; i++) {
+        const airbnbEmbed = airbnbEmbeds[i];
+        const listing = airbnbListings[i % numListings];
+
         airbnbEmbed.setAttribute("data-id", listing.id);
 
-        // Mettre à jour les liens à l'intérieur de l'élément embed
         airbnbEmbed.innerHTML = `
             <a href="${listing.url}?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget">Voir sur Airbnb</a>
             <a href="${listing.url}?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget" rel="nofollow">
                 ${listing.description}
             </a>
         `;
-
-        // Charger un script spécifique à chaque élément (si nécessaire)
-        loadScript("airbnb_script.js", "airbnb-script");
-    });
-
-    // Mise à jour de l'index pour le prochain listing
-    currentListingIndex = (currentListingIndex + 1) % airbnbListings.length;
+        loadScript("airbnb_script.js", "airbnb-script-" + i);
+    }
 }
 
 // Run once on page load
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById('airbnb_2').style.display = 'none';
     document.getElementById('airbnb_3').style.display = 'none';
-    displayReviews();
     updateAirbnbListing();
-    
-    // Change reviews and listing every 5 seconds
-    setInterval(() => {
-        displayReviews();
-        // loadAirbnbScript();
-    }, intervalTime);
+    displayReviews();
+});
+
+document.getElementById('prevArrow').addEventListener('click', () => {
+    currentIndex = currentIndex > 1 ? currentIndex - 1 : currentIndex;
+    loadAirbnbScript();
+});
+
+document.getElementById('nextArrow').addEventListener('click', () => {
+    currentIndex = currentIndex < airbnbListings.length ? currentIndex + 1 : currentIndex;
+    loadAirbnbScript();
 });
