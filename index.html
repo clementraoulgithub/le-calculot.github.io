@@ -262,241 +262,6 @@
                 background-image: url(&#34;image/fx/connections1.svg&#34;);
               "
             ></div>
-            <template class="s_embed_code_saved"
-              ><meta charset="UTF-8" />
-              <meta
-                name="viewport"
-                content="width=device-width, initial-scale=1.0"
-              />
-              <title>Avis Airbnb</title>
-              <style>
-                /* Section Airbnb */
-                .airbnb-section {
-                  display: flex;
-                  flex-direction: column;
-                  max-width: 1000px;
-                  width: 100%;
-                  margin: auto;
-                }
-
-                /* Conteneur principal */
-                .airbnb-content {
-                  display: flex;
-                  gap: 20px;
-                }
-
-                /* Airbnb embed à gauche (2/3 de la largeur) */
-                .airbnb-embed {
-                  flex: 2;
-                  max-width: 60%;
-                }
-
-                /* Avis à droite (1/3 de la largeur) */
-                .reviews-container {
-                  flex: 1;
-                  max-width: 33%;
-                }
-
-                /* Avis */
-                .review-card {
-                  background: white;
-                  border-radius: 10px;
-                  padding: 25px;
-                  margin-bottom: 25px;
-                  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                  opacity: 0;
-                  transform: translateY(20px);
-                  transition: all 0.5s ease-in-out;
-                }
-
-                .review-card.visible {
-                  opacity: 1;
-                  transform: translateY(0);
-                }
-
-                .review-header {
-                  display: flex;
-                  align-items: center;
-                  margin-bottom: 10px;
-                }
-
-                .review-header img {
-                  width: 40px;
-                  height: 40px;
-                  border-radius: 50%;
-                  margin-right: 10px;
-                }
-
-                .review-name {
-                  font-weight: bold;
-                  flex-grow: 1;
-                }
-
-                .stars {
-                  color: gold;
-                  font-size: 16px;
-                }
-
-                .review-text {
-                  font-size: 14px;
-                  color: #555;
-                }
-
-                /* Section Caractéristiques */
-                .features {
-                  display: flex;
-                  flex-direction: column;
-                  gap: 15px;
-                  margin-top: 30px;
-                  padding: 20px;
-                  background: #f9f9f9;
-                  border-radius: 10px;
-                }
-
-                .feature {
-                  display: flex;
-                  align-items: center;
-                  gap: 10px;
-                }
-
-                .feature svg {
-                  width: 24px;
-                  height: 24px;
-                  fill: #ff385c;
-                }
-
-                /* Responsive */
-                @media (max-width: 768px) {
-                  .airbnb-content {
-                    flex-direction: column;
-                    align-items: center;
-                  }
-
-                  .airbnb-embed,
-                  .reviews-container {
-                    max-width: 100%;
-                  }
-                }
-              </style>
-
-              <div class="airbnb-section">
-                <div class="airbnb-content">
-                  <div class="airbnb-embed">
-                    <div
-                      class="airbnb-embed-frame"
-                      data-id="1160899826600585254"
-                      data-view="home"
-                      data-hide-price="true"
-                      style="width: 100%; height: 300px"
-                    >
-                      <a
-                        href="https://www.airbnb.fr/rooms/1160899826600585254?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget"
-                        >Voir sur Airbnb</a
-                      >
-                      <a
-                        href="https://www.airbnb.fr/rooms/1160899826600585254?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget"
-                        rel="nofollow"
-                      >
-                        Appartement · Perros-Guirec · ★4,76 · Studio · 1 lit ·
-                        1 salle de bain
-                      </a>
-                      <script
-                        async=""
-                        src="https://www.airbnb.fr/embeddable/airbnb_jssdk"
-                      ></script>
-                    </div>
-                  </div>
-
-                  <div class="reviews-container" id="reviews"></div>
-                </div>
-
-                <div class="features">
-                  <div class="feature">
-                    <svg viewbox="0 0 24 24">
-                      <path
-                        d="M12 2L15 8.5L22 9.5L17 14.5L18.5 21L12 17.5L5.5 21L7 14.5L2 9.5L9 8.5L12 2Z"
-                      ></path>
-                    </svg>
-                    <span
-                      >À 3 minutes à pied de la plage - Plage de Trestraou</span
-                    >
-                  </div>
-
-                  <div class="feature">
-                    <svg viewbox="0 0 24 24">
-                      <path
-                        d="M12 2L15 8.5L22 9.5L17 14.5L18.5 21L12 17.5L5.5 21L7 14.5L2 9.5L9 8.5L12 2Z"
-                      ></path>
-                    </svg>
-                    <span>Arrivée autonome avec boîte à clé sécurisée</span>
-                  </div>
-
-                  <div class="feature">
-                    <svg viewbox="0 0 24 24">
-                      <path
-                        d="M12 2L15 8.5L22 9.5L17 14.5L18.5 21L12 17.5L5.5 21L7 14.5L2 9.5L9 8.5L12 2Z"
-                      ></path>
-                    </svg>
-                    <span
-                      >Environnement magnifique et emplacement pittoresque</span
-                    >
-                  </div>
-                </div>
-              </div>
-
-              <script>
-                const reviews = [
-                  {
-                    name: "Régis",
-                    text: "Le logement est parfait pour un week-end. Il est très bien équipé et l’emplacement est top. La vue est magnifique. Je recommande ce logement :)",
-                    img: "https://a0.muscache.com/im/pictures/user/User-138675833/original/02460210-74c3-4448-9ace-2f3f2072cf82.jpeg?im_w=240&im_format=avif",
-                    rating: 5,
-                  },
-                  {
-                    name: "Ilona",
-                    text: "Appartement très bien placé avec une super vue, parfait pour un week-end",
-                    img: "https://a0.muscache.com/im/pictures/user/User-589090459/original/9c6854aa-854f-442a-b664-e306d97527af.jpeg?im_w=240&im_format=avif",
-                    rating: 4,
-                  },
-                  {
-                    name: "Louis",
-                    text: "Studio parfait pour un week-end, bien exposé et commodités à proximité.",
-                    img: "https://a0.muscache.com/im/pictures/user/41d3c09a-e263-42bc-be61-5fb7d74291a9.jpg?im_w=240&im_format=avif",
-                    rating: 5,
-                  },
-                ];
-
-                const reviewsContainer = document.getElementById("reviews");
-
-                function generateStars(rating) {
-                  let stars = "";
-                  for (let i = 0; i < rating; i++) stars += "★";
-                  for (let i = rating; i < 5; i++) stars += "☆";
-                  return stars;
-                }
-
-                function addReviews() {
-                  reviews.forEach((review, index) => {
-                    const card = document.createElement("div");
-                    card.classList.add("review-card");
-                    card.innerHTML = `<div class="review-header"><img src="${
-                      review.img
-                    }" alt="Avatar"><div class="review-name">${
-                      review.name
-                    }</div><div class="stars">${generateStars(
-                      review.rating
-                    )}</div></div><p class="review-text">${review.text}</p>`;
-                    reviewsContainer.appendChild(card);
-                    setTimeout(
-                      () => card.classList.add("visible"),
-                      index * 300
-                    );
-                  });
-                }
-
-                document.addEventListener("DOMContentLoaded", addReviews);
-              </script></template
-            >
             <div class="s_embed_code_embedded o_not_editable container-fluid">
               <meta charset="UTF-8" /><meta
                 name="viewport"
@@ -614,33 +379,16 @@
               <div class="airbnb-section">
                 <div class="airbnb-content">
                   <div class="airbnb-embed">
-                    <div
-                      class="airbnb-embed-frame"
-                      data-id="1160899826600585254"
-                      data-view="home"
-                      data-hide-price="true"
-                      style="width: 100%; height: 300px"
-                    >
-                      <a
-                        href="https://www.airbnb.fr/rooms/1160899826600585254?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget"
-                        >Voir sur Airbnb</a
-                      >
-                      <a
-                        href="https://www.airbnb.fr/rooms/1160899826600585254?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget"
-                        rel="nofollow"
-                      >
-                        Appartement · Perros-Guirec · ★4,76 · Studio · 1 lit ·
-                        1&nbsp;salle de bain
-                      </a>
-                      <script
-                        async=""
-                        src="https://www.airbnb.fr/embeddable/airbnb_jssdk"
-                      ></script>
+                    <div class="airbnb-embed-frame" id="airbnb_1" data-view="home" data-hide-price="true" style="width: 100%; height: 300px;">
+                    </div>
+                    <div class="airbnb-embed-frame" id="airbnb_2" data-view="home" data-hide-price="true" style="width: 100%; height: 300px;">
+                    </div>
+                    <div class="airbnb-embed-frame" id="airbnb_3" data-view="home" data-hide-price="true" style="width: 100%; height: 300px;">
                     </div>
                   </div>
-
                   <div class="reviews-container" id="reviews"></div>
                 </div>
+
 
                 <div class="features">
                   <div class="feature">
@@ -675,58 +423,6 @@
                   </div>
                 </div>
               </div>
-              <script>
-                const reviews = [
-                  {
-                    name: "Régis",
-                    text: "Le logement est parfait pour un week-end. Il est très bien équipé et l’emplacement est top. La vue est magnifique. Je recommande ce logement :)",
-                    img: "https://a0.muscache.com/im/pictures/user/User-138675833/original/02460210-74c3-4448-9ace-2f3f2072cf82.jpeg?im_w=240&im_format=avif",
-                    rating: 5,
-                  },
-                  {
-                    name: "Ilona",
-                    text: "Appartement très bien placé avec une super vue, parfait pour un week-end",
-                    img: "https://a0.muscache.com/im/pictures/user/User-589090459/original/9c6854aa-854f-442a-b664-e306d97527af.jpeg?im_w=240&im_format=avif",
-                    rating: 4,
-                  },
-                  {
-                    name: "Louis",
-                    text: "Studio parfait pour un week-end, bien exposé et commodités à proximité.",
-                    img: "https://a0.muscache.com/im/pictures/user/41d3c09a-e263-42bc-be61-5fb7d74291a9.jpg?im_w=240&im_format=avif",
-                    rating: 5,
-                  },
-                ];
-
-                const reviewsContainer = document.getElementById("reviews");
-
-                function generateStars(rating) {
-                  let stars = "";
-                  for (let i = 0; i < rating; i++) stars += "★";
-                  for (let i = rating; i < 5; i++) stars += "☆";
-                  return stars;
-                }
-
-                function addReviews() {
-                  reviews.forEach((review, index) => {
-                    const card = document.createElement("div");
-                    card.classList.add("review-card");
-                    card.innerHTML = `<div class="review-header"><img src="${
-                      review.img
-                    }" alt="Avatar"><div class="review-name">${
-                      review.name
-                    }</div><div class="stars">${generateStars(
-                      review.rating
-                    )}</div></div><p class="review-text">${review.text}</p>`;
-                    reviewsContainer.appendChild(card);
-                    setTimeout(
-                      () => card.classList.add("visible"),
-                      index * 300
-                    );
-                  });
-                }
-
-                document.addEventListener("DOMContentLoaded", addReviews);
-              </script>
             </div>
           </section>
           <section
@@ -917,5 +613,6 @@
         </div>
       </footer>
     </div>
+    <script type="text/javascript" src="rates.js" defer></script>
   </body>
 </html>
