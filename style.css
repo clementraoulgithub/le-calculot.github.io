@@ -122,14 +122,14 @@ a {
 
 .a_underline {
     color: rgba(var(--link-color-rgb), var(--link-opacity, 1));
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .a_underline::before {
     content: "";
     display: inline-block;
-    width: 12px; /* Taille du SVG */
-    height: 12px;
+    width: 18px; /* Taille du SVG */
+    height: 18px;
     background-image: url('image/fx/link.svg');
     background-size: contain;
     background-repeat: no-repeat;
