@@ -120,6 +120,22 @@ a {
     text-decoration: none;
 }
 
+.a_underline {
+    color: rgba(var(--link-color-rgb), var(--link-opacity, 1));
+    text-decoration: underline;
+}
+
+.a_underline::before {
+    content: "";
+    display: inline-block;
+    width: 12px; /* Taille du SVG */
+    height: 12px;
+    background-image: url('image/fx/link.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 2px;
+}
+
 a:hover {
     --link-color-rgb: var(--link-hover-color-rgb);
     text-decoration: underline;
