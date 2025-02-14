@@ -45,22 +45,28 @@ const airbnbListings = [
         id: "1160899826600585254",
         url: "https://www.airbnb.fr/rooms/1160899826600585254",
         description: "Appartement · Perros-Guirec · ★4,76 · Studio · 1 lit · 1 salle de bain"
-    },
-    {
-        id: "1160899826600585254",
-        url: "https://www.airbnb.fr/rooms/1160899826600585254",
-        description: "Appartement · Perros-Guirec · ★4,76 · Studio · 1 lit · 1 salle de bain"
-    },
-    {
-        id: "1160899826600585254",
-        url: "https://www.airbnb.fr/rooms/1160899826600585254",
-        description: "Appartement · Perros-Guirec · ★4,76 · Studio · 1 lit · 1 salle de bain"
-    },
+    }
 ];
 
 
 function generateStars(rating) {
     return "★".repeat(rating) + "☆".repeat(5 - rating);
+}
+
+function toggleArrowsVisibility() {
+    const prevArrow = document.getElementById('prevArrow');
+    const nextArrow = document.getElementById('nextArrow');
+
+    if (airbnbListings.length < 2) {
+        prevArrow.style.display = 'none';
+        nextArrow.style.display = 'none';
+    } else {
+        prevArrow.style.display = 'inline-block';
+        nextArrow.style.display = 'inline-block';
+    }
+    setInterval(() => {
+        displayReviews();
+    }, 5000);
 }
 
 
@@ -148,6 +154,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById('airbnb_2').style.display = 'none';
     document.getElementById('airbnb_3').style.display = 'none';
     updateAirbnbListing();
+    toggleArrowsVisibility();
     displayReviews();
 });
 

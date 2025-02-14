@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=DM+Sans:300,300i,400,400i,700,700i&display=swap"); @import url("https://fonts.googleapis.com/css?family=Elsie:400,900&display=swap"); /* <inline asset> */
 
-
 .o_we_shape {
     --ShapeConnections--size-regular: 4rem;
 }
@@ -1654,13 +1653,6 @@ header nav.navbar {
 #wrapwrap.o_header_overlay > header:not(.o_header_affixed):not(.o_header_sidebar):not(.o_top_menu_collapse_shown) > .navbar .o_header_mobile_buttons_wrap, #wrapwrap.o_header_overlay > header:not(.o_header_affixed):not(.o_header_sidebar):not(.o_top_menu_collapse_shown) > .navbar .btn[data-bs-toggle="offcanvas"] {
     color: inherit;
 }
-
-/* #wrapwrap.o_header_overlay > header:not(.o_header_affixed):not(.o_header_sidebar):not(.o_top_menu_collapse_shown) > .navbar .navbar-toggler-icon {
-    background-color: currentColor;
-    background-image: none;
-    mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba(33, 37, 41, 0.75)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
-    -webkit-mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba(33, 37, 41, 0.75)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
-} */
 
 #o_footer_scrolltop_wrapper {
     position: relative;

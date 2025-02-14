@@ -1467,6 +1467,10 @@ html, body {
     background-repeat: no-repeat no-repeat;
 }
 
+#wrapwrap:not(.o_header_overlay) header .nav-item > .nav-link > *, #wrapwrap:not(.o_header_overlay) header .nav-item > .nav-link::after, header .o_navbar_mobile .nav-item > .nav-link > *, header .o_navbar_mobile .nav-item > .nav-link::after {
+    color: !important;
+}
+
 /* /web_editor/static/src/scss/web_editor.frontend.scss */
 
 @media (max-width: 767.98px) {
