@@ -1467,6 +1467,13 @@ html, body {
     background-repeat: no-repeat no-repeat;
 }
 
+.o_we_shape.o_web_editor_Connections_02 {
+    background-image: url("/web_editor/shape/web_editor/Connections/02.svg?c5=%23141f2e");
+    background-position: bottom;
+    background-size: 100% var(--ShapeConnections--size-regular);
+    background-repeat: no-repeat no-repeat;
+}
+
 #wrapwrap:not(.o_header_overlay) header .nav-item > .nav-link > *, #wrapwrap:not(.o_header_overlay) header .nav-item > .nav-link::after, header .o_navbar_mobile .nav-item > .nav-link > *, header .o_navbar_mobile .nav-item > .nav-link::after {
     color: !important;
 }

@@ -133,7 +133,7 @@ a {
     background-image: url('image/fx/link.svg');
     background-size: contain;
     background-repeat: no-repeat;
-    margin-right: 2px;
+    margin-right: 4px;
 }
 
 a:hover {
