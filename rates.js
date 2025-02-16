@@ -224,9 +224,10 @@ function createCarousel() {
     }
 
     if (isMobile) {
-        slides.forEach((slide, index) => {
+        slides.forEach((slide) => {
             slide.addEventListener("click", () => {
-                currentIndex = index;
+                currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                showSlide(currentIndex);
                 updateCarousel();
             });
         });
