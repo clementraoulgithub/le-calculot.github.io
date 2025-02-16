@@ -1788,10 +1788,9 @@ body {
     position: absolute;
     font-size: 2rem;
     top: 50%;
-    transform: translateY(-100%);
     color: rgba(255, 255, 255, .3);
     cursor: pointer;
-    border-radius: 100rem;
+    border-radius: 50%;
     background-color: rgba(0, 0, 0, .1);
     border: 1px solid rgb(211, 211, 211);
 }
@@ -1812,20 +1811,20 @@ body {
 }
 
 
-.arrow.next{
-    right: 1rem;
+.arrow.next {
+    right: 2%;
 }
 
 .arrow-lightbox.next {
-    right: 10rem;
+    right: 10%;
 }
 
 .arrow.prev {
-    left: 1rem;
+    left: 2%;
 }
 
 .arrow-lightbox.prev  {
-    left: 10rem;
+    left: 10%;
 }
 
 .lightbox {
