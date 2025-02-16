@@ -226,7 +226,7 @@ function createCarousel() {
     if (isMobile) {
         slides.forEach((slide) => {
             slide.addEventListener("click", () => {
-                currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                currentIndex = (currentIndex + 1 + slides.length) % slides.length;
                 showSlide(currentIndex);
                 updateCarousel();
             });
