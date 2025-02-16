@@ -1797,8 +1797,10 @@ body {
 
 .arrow svg,
 .arrow-lightbox svg {
-    width: 3rem;
-    height: 3rem;
+    width: 48px;
+    height: 48px;
+    max-width: 3rem;
+    max-height: 3rem;
     stroke: white;
     transition: transform 0.2s ease, opacity 0.2s ease;
     opacity: 1;
