@@ -6,6 +6,8 @@ let currentListingIndex = 0;
 const reviewsPerPage = 3;
 const intervalTime = 10000; // 10 seconds
 
+let isMobile = window.innerWidth <= 768;
+
 const slides = document.querySelectorAll(".slide");
 const prevButton = document.getElementById("prevArrow");
 const nextButton = document.getElementById("nextArrow");
@@ -100,7 +102,9 @@ function displayReviews() {
 }
 
 function createLightbox() {
-    if (window.innerWidth <= 768) return;
+    if (isMobile) {
+        return
+    }
     const lightbox = document.getElementById("lightbox");
     const lightboxImg = document.getElementById("lightbox-img");
     const prevLightbox = document.getElementById("prevLightbox");
@@ -219,6 +223,15 @@ function createCarousel() {
         }
     }
 
+    if (isMobile) {
+        slides.forEach((slide, index) => {
+            slide.addEventListener("click", () => {
+                currentIndex = index;
+                updateCarousel();
+            });
+        });
+    }
+
     prevArrow.addEventListener("click", () => {
         currentIndex = (currentIndex - 1 + slides.length) % slides.length;
         showSlide(currentIndex);
@@ -241,7 +254,6 @@ function createCarousel() {
 
     updateCarousel(); // Initialiser l'affichage
 }
-
 
 
 document.addEventListener("DOMContentLoaded", () => {
