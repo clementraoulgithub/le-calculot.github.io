@@ -1782,6 +1782,8 @@ body {
 
 .arrow,
 .arrow-lightbox {
+    width: 3rem; /* Taille fixe */
+    height: 3rem;
     z-index: 2;
     background: none;
     border: none;
@@ -1793,14 +1795,12 @@ body {
     border-radius: 50%;
     background-color: rgba(0, 0, 0, .1);
     border: 1px solid rgb(211, 211, 211);
+    display: flex;
+    transform: translateY(-50%); 
 }
 
 .arrow svg,
 .arrow-lightbox svg {
-    width: 48px;
-    height: 48px;
-    max-width: 3rem;
-    max-height: 3rem;
     stroke: white;
     transition: transform 0.2s ease, opacity 0.2s ease;
     opacity: 1;
