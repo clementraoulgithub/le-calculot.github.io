@@ -2,10 +2,14 @@ const reviewsContainer = document.getElementById("reviews");
 
 let currentReviewIndex = 0;
 let currentListingIndex = 0;
-let currentIndex = 1;
 
 const reviewsPerPage = 3;
 const intervalTime = 10000; // 10 seconds
+
+const slides = document.querySelectorAll(".slide");
+const prevButton = document.getElementById("prevArrow");
+const nextButton = document.getElementById("nextArrow");
+let currentIndex = 0;
 
 const reviews = [
     { 
@@ -53,23 +57,6 @@ function generateStars(rating) {
     return "★".repeat(rating) + "☆".repeat(5 - rating);
 }
 
-function toggleArrowsVisibility() {
-    const prevArrow = document.getElementById('prevArrow');
-    const nextArrow = document.getElementById('nextArrow');
-
-    if (airbnbListings.length < 2) {
-        prevArrow.style.display = 'none';
-        nextArrow.style.display = 'none';
-    } else {
-        prevArrow.style.display = 'inline-block';
-        nextArrow.style.display = 'inline-block';
-    }
-    setInterval(() => {
-        displayReviews();
-    }, 5000);
-}
-
-
 function displayReviews() {
     // Clear previous reviews
     reviewsContainer.innerHTML = "";
@@ -93,77 +80,178 @@ function displayReviews() {
         setTimeout(() => card.classList.add("visible"), i * 300);
     }
 
+    // Create a div and add the link inside
+    const link_container = document.createElement("div");
+    link_container.classList.add("link-container");
+    reviewsContainer.appendChild(link_container);
+
+
+    const link = document.createElement("a");
+    link.classList.add("a_underline");
+    link.classList.add("black");
+    link.href = "https://www.airbnb.fr/rooms/1160899826600585254/reviews?search_mode=regular_search&adults=1&check_in=2025-03-03&check_out=2025-03-08&children=0&infants=0&pets=0&source_impression_id=p3_1739721997_P3hEuhNgaNwy5hKk&previous_page_section_name=1000&federated_search_id=a52c5b83-b47e-4f46-a3c3-2216590192b1"
+    link.textContent = "Voir tous les avis";
+    link_container.appendChild(link);
+
+
+
     // Update index for the next display
     currentReviewIndex = (currentReviewIndex + reviewsPerPage) % reviews.length;
 }
 
+function createLightbox() {
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const prevLightbox = document.getElementById("prevLightbox");
+    const nextLightbox = document.getElementById("nextLightbox");
+    const counter = document.getElementById("lightbox-counter");
+    const caption = document.getElementById("lightbox-caption");
+    const slides = document.querySelectorAll(".slide img");
+    let currentIndex = 0;
 
-function loadAirbnbScript() {
-    document.getElementById('airbnb_1').style.display = 'none';
-    document.getElementById('airbnb_2').style.display = 'none';
-    document.getElementById('airbnb_3').style.display = 'none';
+    // Ouvrir la lightbox en cliquant sur une image
+    slides.forEach((img, index) => {
+        img.addEventListener("click", () => {
+            currentIndex = index;
+            showImageInLightbox(currentIndex);
+        });
+    });
 
-    // Montrer l'élément suivant en fonction de l'index
-    if (currentIndex === 1) {
-        document.getElementById('airbnb_2').style.display = 'block';
-    } else if (currentIndex === 2) {
-        document.getElementById('airbnb_3').style.display = 'block';
-    } else if (currentIndex === 3) {
-        document.getElementById('airbnb_1').style.display = 'block';
+    function showImageInLightbox(index) {
+        if (index >= 0 && index < slides.length) {
+            const imgElement = slides[index];
+            lightboxImg.setAttribute("src", imgElement.getAttribute("src"));
+            lightbox.classList.add("active");
+
+            updateCounter(index);
+            updateCaption(imgElement);
+        }
     }
 
-    displayReviews();
-}
-
-const loadScript = (src, name) => {
-    return new Promise((resolve, reject) => {
-        const script = document.createElement('script')
-        script.src = src
-        script.async = true
-        script.onload = resolve
-        script.onerror = reject
-            
-        document.body.appendChild(script).setAttribute("id", name)
-    })
-};
-
-function updateAirbnbListing() {
-    const airbnbEmbeds = document.querySelectorAll('.airbnb-embed-frame');
-
-    const numListings = airbnbListings.length;
-    const numEmbeds = airbnbEmbeds.length;
-
-    for (let i = 0; i < numEmbeds; i++) {
-        const airbnbEmbed = airbnbEmbeds[i];
-        const listing = airbnbListings[i % numListings];
-
-        airbnbEmbed.setAttribute("data-id", listing.id);
-
-        airbnbEmbed.innerHTML = `
-            <a href="${listing.url}?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget">Voir sur Airbnb</a>
-            <a href="${listing.url}?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget" rel="nofollow">
-                ${listing.description}
-            </a>
-        `;
-        loadScript("airbnb_script.js", "airbnb-script-" + i);
+    function updateCounter(index) {
+        counter.textContent = `${index + 1} / ${slides.length}`;
     }
+
+    function updateCaption(imgElement) {
+        const type = imgElement.getAttribute("data-type") || "Image";
+        caption.textContent = type;
+    }
+
+    // Navigation avec les flèches
+    prevLightbox.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        showImageInLightbox(currentIndex);
+    });
+
+    nextLightbox.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showImageInLightbox(currentIndex);
+    });
+
+    // Fermer la lightbox en cliquant en dehors ou en appuyant sur Échap
+    lightbox.addEventListener("click", (e) => {
+        if (e.target !== lightboxImg && e.target !== prevLightbox && e.target !== nextLightbox) {
+            lightbox.classList.remove("active");
+        }
+    });
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+            lightbox.classList.remove("active");
+        } else if (e.key === "ArrowLeft") {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            showImageInLightbox(currentIndex);
+        } else if (e.key === "ArrowRight") {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showImageInLightbox(currentIndex);
+        }
+    });
 }
 
-// Run once on page load
+
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        if (i === index) {
+            slide.setAttribute("data-active", "");
+        } else {
+            slide.removeAttribute("data-active");
+        }
+    });
+}
+
+function createCarousel() {
+    const slides = document.querySelectorAll(".slide");
+    const prevArrow = document.getElementById("prevArrow");
+    const nextArrow = document.getElementById("nextArrow");
+    const dotsContainer = document.querySelector(".pagination-dots");
+    let currentIndex = 0;
+
+    // Création des bulles dynamiquement
+    slides.forEach((_, index) => {
+        const dot = document.createElement("span");
+        dot.classList.add("dot");
+        if (index === 0) {
+          dot.classList.add("active");
+        } // Active la première bulle
+        dotsContainer.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll(".dot");
+
+    function updateCarousel() {
+        slides.forEach((slide, index) => {
+            slide.classList.toggle("active", index === currentIndex);
+        });
+
+        // Mise à jour des bulles
+        dots.forEach((dot, index) => {
+            dot.classList.toggle("active", index === currentIndex);
+        });
+
+        // Met à jour la légende sous l'image du carrousel
+        const activeSlide = slides[currentIndex];
+        const caption = activeSlide.querySelector(".carousel-caption");
+        const imgType = activeSlide.querySelector("img").getAttribute("data-type");
+
+        if (caption && imgType) {
+            caption.textContent = imgType;
+        }
+    }
+
+    prevArrow.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        showSlide(currentIndex);
+        updateCarousel();
+    });
+
+    nextArrow.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+        updateCarousel();
+    });
+
+    // Ajouter un événement pour cliquer sur les bulles
+    dots.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+            currentIndex = index;
+            updateCarousel();
+        });
+    });
+
+    updateCarousel(); // Initialiser l'affichage
+}
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById('airbnb_2').style.display = 'none';
-    document.getElementById('airbnb_3').style.display = 'none';
-    updateAirbnbListing();
-    toggleArrowsVisibility();
+    createLightbox();
     displayReviews();
+    createCarousel();
+    setInterval(() => {
+        displayReviews();
+    }, intervalTime);
 });
 
-document.getElementById('prevArrow').addEventListener('click', () => {
-    currentIndex = currentIndex > 1 ? currentIndex - 1 : currentIndex;
-    loadAirbnbScript();
-});
 
-document.getElementById('nextArrow').addEventListener('click', () => {
-    currentIndex = currentIndex < airbnbListings.length ? currentIndex + 1 : currentIndex;
-    loadAirbnbScript();
-});
+

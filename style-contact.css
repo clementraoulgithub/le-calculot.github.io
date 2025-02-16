@@ -1033,7 +1033,7 @@ textarea.form-control {
 /* /web/static/src/scss/bootstrap_review_frontend.scss */
 
 .bg-black-50 {
-    background-color: rgba(0, 0, 0, 0.5) !important;
+    background-color: rgba(0, 0, 0, 0.3) !important;
     color: #FFFFFF;
 }
 
