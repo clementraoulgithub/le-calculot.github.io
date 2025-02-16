@@ -1801,8 +1801,6 @@ body {
 
 .arrow svg,
 .arrow-lightbox svg {
-    width: 3rem; /* Taille fixe */
-    height: 3rem;
     stroke: white;
     transition: transform 0.2s ease, opacity 0.2s ease;
     opacity: 1;
@@ -1829,6 +1827,13 @@ body {
 
 .arrow-lightbox.prev  {
     left: 10%;
+}
+
+@media (max-width: 768px) { /* Ajuste la largeur selon ton besoin */
+    .arrow,
+    .arrow-lightbox {
+        display: none !important; /* Masque complètement les flèches */
+    }
 }
 
 .lightbox {

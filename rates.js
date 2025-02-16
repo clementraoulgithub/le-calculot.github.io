@@ -100,6 +100,7 @@ function displayReviews() {
 }
 
 function createLightbox() {
+    if (window.innerWidth <= 768) return;
     const lightbox = document.getElementById("lightbox");
     const lightboxImg = document.getElementById("lightbox-img");
     const prevLightbox = document.getElementById("prevLightbox");
@@ -109,7 +110,6 @@ function createLightbox() {
     const slides = document.querySelectorAll(".slide img");
     let currentIndex = 0;
 
-    // Ouvrir la lightbox en cliquant sur une image
     slides.forEach((img, index) => {
         img.addEventListener("click", () => {
             currentIndex = index;
