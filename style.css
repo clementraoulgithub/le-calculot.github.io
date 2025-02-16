@@ -1801,6 +1801,8 @@ body {
 
 .arrow svg,
 .arrow-lightbox svg {
+    width: 3rem; /* Taille fixe */
+    height: 3rem;
     stroke: white;
     transition: transform 0.2s ease, opacity 0.2s ease;
     opacity: 1;
