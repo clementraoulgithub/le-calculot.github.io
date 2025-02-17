@@ -15,34 +15,34 @@ let currentIndex = 0;
 
 const reviews = [
     { 
-        name: "Régis", 
-        text: "Le logement est parfait pour un week-end. Il est très bien équipé et l’emplacement est top. La vue est magnifique. Je recommande ce logement :)", 
-        img: "https://a0.muscache.com/im/pictures/user/User-138675833/original/02460210-74c3-4448-9ace-2f3f2072cf82.jpeg?im_w=240&im_format=avif", 
+        name: "Cathy", 
+        text: "Studio fonctionnel,très bien situé avec vue sur la plage, restaurants proches et Sentiers des douaniers, juste à côté. Un petit cadeau local nous attendait sur la table.", 
+        img: "https://a0.muscache.com/im/pictures/user/User-537114708/original/d1a4e46d-ae26-46f1-9ba7-6ad4d00b6c98.jpeg?im_w=240&im_format=avif", 
         rating: 5 
     },
     { 
-        name: "Ilona", 
-        text: "Appartement très bien placé avec une super vue, parfait pour un week-end.", 
-        img: "https://a0.muscache.com/im/pictures/user/User-589090459/original/9c6854aa-854f-442a-b664-e306d97527af.jpeg?im_w=240&im_format=avif", 
-        rating: 4 
-    },
-    { 
-        name: "Louis", 
-        text: "Studio parfait pour un week-end, bien exposé et commodités à proximité.", 
-        img: "https://a0.muscache.com/im/pictures/user/41d3c09a-e263-42bc-be61-5fb7d74291a9.jpg?im_w=240&im_format=avif", 
-        rating: 5 
-    },
-    { 
-        name: "Mélanie", 
-        text: "Petit studio avec une très jolie vue. La véranda est un vrai plus !", 
-        img: "https://a0.muscache.com/im/pictures/user/6f00e21f-d192-4ad8-8fb5-8a7d65f96a34.jpg?im_w=240&im_format=avif", 
-        rating: 4
-    },
-    { 
-        name: "Lisa", 
-        text: "Appartement fidèle à l'annonce , très beau point de vue . Bien situé sur la côte de granit rose pour tous les amateurs de cailloux", 
-        img: "https://a0.muscache.com/im/pictures/user/68b26ee8-171a-4a13-a25a-531291393fcd.jpg?im_w=240&im_format=avif", 
+        name: "Margaux", 
+        text: "Vue magnifique commerce à proximité balade à couper le souffle le logement est propre et accueillant merci beaucoup", 
+        img: "https://a0.muscache.com/im/pictures/user/03449366-4bd2-4e67-a010-b25c69f95bc1.jpg?im_w=240&im_format=avif", 
         rating: 5
+    },
+    { 
+        name: "Fabrice", 
+        text: "Studio impeccable , idéalement situé dans cette belle région , tout à porté de main , resto , superette , sentier des douaniers de la côte de granit rose ( magnifique !)", 
+        img: "https://a0.muscache.com/im/pictures/user/232c88c9-b877-4ecf-b8aa-86b0babbdcb9.jpg?im_w=240&im_format=avif", 
+        rating: 5 
+    },
+    { 
+        name: "Olivier", 
+        text: "Appartement propre et très agréable, bien agencé, je recommande", 
+        img: "https://a0.muscache.com/im/pictures/user/22a6e666-d0fd-48bf-8fda-4d82f2286982.jpg?im_w=240&im_format=avif", 
+        rating: 5
+    },
+    { 
+        name: "Andreza", 
+        text: "Nous avons passé une magnifique semaine de soleil avec l' imprenable vue sur la plage depuis le balcon. Justine a été très réactive quand nous l'avons sollicité.", 
+        img: "https://a0.muscache.com/im/pictures/user/ffc42fd5-93ec-446e-ab6c-776b1670e90c.jpg?im_w=240&im_format=avif", 
+        rating: 4
     }
 ];
 
@@ -67,8 +67,8 @@ function displayReviews() {
 
     const link = document.createElement("a");
     link.classList.add("black");
-    link.href = "https://www.airbnb.fr/rooms/1160899826600585254/reviews?search_mode=regular_search&adults=1&check_in=2025-03-03&check_out=2025-03-08&children=0&infants=0&pets=0&source_impression_id=p3_1739721997_P3hEuhNgaNwy5hKk&previous_page_section_name=1000&federated_search_id=a52c5b83-b47e-4f46-a3c3-2216590192b1"
-    link.textContent = "4,74 ★ - Voir tous les avis";
+    link.href = "https://www.airbnb.fr/rooms/47781446/reviews?check_out=2025-02-28&viralityEntryPoint=1&unique_share_id=C52AE9C3-EB58-4DF0-8D28-12475C309BBD&slcid=ba18e191feb143dc90668a72e604b371&s=76&feature=share&adults=2&check_in=2025-02-25&channel=native&slug=4hJy5GTd&source_impression_id=p3_1739821536_P3zZZS7FPTd4KOXV"
+    link.textContent = "4,73 ★ - Voir tous les avis";
     link_container.appendChild(link);
 
     // Select 3 reviews to display
