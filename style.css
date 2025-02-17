@@ -1777,12 +1777,30 @@ body {
     object-fit: cover;
     object-position: center;
     border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 
-.arrow,
+.arrow {
+    width: 3rem;
+    height: 3rem;
+    z-index: 2;
+    background: none;
+    border: none;
+    position: absolute;
+    font-size: 2rem;
+    top: 40%;
+    color: rgba(255, 255, 255, .3);
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, .1);
+    border: 1px solid rgb(211, 211, 211);
+    display: flex;
+    transform: translateY(-50%); 
+}
+
 .arrow-lightbox {
-    width: 3rem; /* Taille fixe */
+    width: 3rem;
     height: 3rem;
     z-index: 2;
     background: none;
@@ -1965,4 +1983,12 @@ body {
 .book_button:hover {
     text-decoration: none;
     color: white;
+}
+
+.map > img {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }

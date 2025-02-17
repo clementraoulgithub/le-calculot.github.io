@@ -3,8 +3,8 @@ const reviewsContainer = document.getElementById("reviews");
 let currentReviewIndex = 0;
 let currentListingIndex = 0;
 
-const reviewsPerPage = 3;
-const intervalTime = 10000; // 10 seconds
+const reviewsPerPage = 1;
+const intervalTime = 5000; // 10 seconds
 
 let isMobile = window.innerWidth <= 768;
 
@@ -63,6 +63,23 @@ function displayReviews() {
     // Clear previous reviews
     reviewsContainer.innerHTML = "";
 
+    const map = document.createElement("div");
+    map.classList.add("map");
+    map.innerHTML = `<img src="image/map-image/map.jpg" alt="Carte Perros-Guirec"/>`;
+    reviewsContainer.appendChild(map);
+
+
+    const link_container = document.createElement("div");
+    link_container.classList.add("link-container");
+    reviewsContainer.appendChild(link_container);
+
+
+    const link = document.createElement("a");
+    link.classList.add("black");
+    link.href = "https://www.airbnb.fr/rooms/1160899826600585254/reviews?search_mode=regular_search&adults=1&check_in=2025-03-03&check_out=2025-03-08&children=0&infants=0&pets=0&source_impression_id=p3_1739721997_P3hEuhNgaNwy5hKk&previous_page_section_name=1000&federated_search_id=a52c5b83-b47e-4f46-a3c3-2216590192b1"
+    link.textContent = "4,74 ★ - Voir tous les avis";
+    link_container.appendChild(link);
+
     // Select 3 reviews to display
     for (let i = 0; i < reviewsPerPage; i++) {
         const review = reviews[(currentReviewIndex + i) % reviews.length]; // Loop through reviews
@@ -81,21 +98,6 @@ function displayReviews() {
         // Add a fade-in effect with delay
         setTimeout(() => card.classList.add("visible"), i * 300);
     }
-
-    // Create a div and add the link inside
-    const link_container = document.createElement("div");
-    link_container.classList.add("link-container");
-    reviewsContainer.appendChild(link_container);
-
-
-    const link = document.createElement("a");
-    link.classList.add("a_underline");
-    link.classList.add("black");
-    link.href = "https://www.airbnb.fr/rooms/1160899826600585254/reviews?search_mode=regular_search&adults=1&check_in=2025-03-03&check_out=2025-03-08&children=0&infants=0&pets=0&source_impression_id=p3_1739721997_P3hEuhNgaNwy5hKk&previous_page_section_name=1000&federated_search_id=a52c5b83-b47e-4f46-a3c3-2216590192b1"
-    link.textContent = "Voir tous les avis";
-    link_container.appendChild(link);
-
-
 
     // Update index for the next display
     currentReviewIndex = (currentReviewIndex + reviewsPerPage) % reviews.length;
