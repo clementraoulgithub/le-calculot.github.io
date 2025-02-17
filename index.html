@@ -116,7 +116,7 @@
           <div class="container">
             <div class="row s_nb_column_fixed">
               <div class="col-lg-12 pb32 o_colored_level">
-                <h2>Découvrez nos&nbsp;logements</h2>
+                <h2>La verticale de vos vacances</h2>
                 <p class="lead">
                   Explorez de nouvelles régions&nbsp;dans les meilleures
                   conditions.
@@ -131,16 +131,15 @@
             <div class="row">
               <div class="col-lg-9 o_colored_level">
                 <h3>
-                  La verticale de vos vacances
+                  Découvrez nos logements
                 </h3>
-                <p>Sélectionnez votre logement</p>
               </div>
             </div>
           </div>
         </section>
         <section class="s_embed_code o_colored_level pt48 pb80 text-start" data-snippet="s_embed_code" style="position: relative">
           <div class="logements-container">
-            <a href="le-calculot.html"><div class="logement">
+            <a href="le-calculot.html"><div class="logement"><span class="coup-de-coeur">❤️ Coup de cœur</span>
                 <img src="image/le-calculot-image/1.webp" alt="Le calculot">
                 <div class="info">
                     <h3>Le calculot</h3>
@@ -182,6 +181,7 @@
                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
                 text-align: center;
                 transition: transform 0.3s ease-in-out;
+                position: relative;
             }
     
             .logement:hover {
@@ -204,6 +204,19 @@
     
             .logement p {
                 color: #555;
+            }
+
+            .coup-de-coeur {
+                position: absolute;
+                top: 10px;
+                right: 0;
+                background-color: rgb(214, 3, 3);
+                color: white;
+                padding: 10px 15px;
+                border-radius: 20px 0 0 20px;
+                font-weight: bold;
+                font-size: 14px;
+                box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
             }
     
             @media (max-width: 768px) {
