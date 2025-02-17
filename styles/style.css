@@ -130,7 +130,7 @@ a {
     display: inline-block;
     width: 18px; /* Taille du SVG */
     height: 18px;
-    background-image: url('image/fx/link.svg');
+    background-image: url('../image/fx/link.svg');
     background-size: contain;
     background-repeat: no-repeat;
     margin-right: 4px;

@@ -65,7 +65,7 @@ function displayReviews() {
 
     const map = document.createElement("div");
     map.classList.add("map");
-    map.innerHTML = `<img src="image/map-image/map.jpg" alt="Carte Perros-Guirec"/>`;
+    map.innerHTML = `<img src="image/le-calculot-image/map-image/map.jpg" alt="Carte Perros-Guirec"/>`;
     reviewsContainer.appendChild(map);
 
 
