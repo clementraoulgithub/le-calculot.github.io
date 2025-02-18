@@ -1790,7 +1790,7 @@ body {
     border: none;
     position: absolute;
     font-size: 2rem;
-    top: 40%;
+    top: 50%;
     color: rgba(255, 255, 255, .3);
     cursor: pointer;
     border-radius: 50%;
@@ -1828,7 +1828,7 @@ body {
 .arrow:hover,
 .arrow-lightbox:hover {
     color: white;
-    background-color: rgba(0, 0, 0, .4);
+    background-color: rgba(0, 0, 0, 0.605);
 }
 
 
@@ -1916,7 +1916,7 @@ body {
 }
 
 .pagination-dots {
-    bottom: 8rem;
+    bottom: 3rem;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -1959,7 +1959,7 @@ body {
     font-weight: bold;
     padding: 12px 24px;
     border: none;
-    border-radius: 25px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background 0.3s, transform 0.2s;
     margin-top: 20px;
@@ -2020,4 +2020,47 @@ body {
 
 .back-to-home:hover {
     background-color: rgba(0, 0, 0, 0.9);
+}
+
+.text-block {
+    width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    overflow: hidden;
+    height: 200px;
+    transition: height 0.3s ease-in-out;
+    position: relative;
+}
+
+.text-block.expanded {
+    height: auto;
+}
+
+.text-block p {
+    margin: 10px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    max-height: none;
+    white-space: pre-line;
+}
+
+.expand-button {
+    position: absolute;
+    bottom: 1px;
+    right: 10px;
+    background-color: transparent;
+    color: #007BFF;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 5px;
+}
+
+.expand-button:hover {
+    color: #0056b3;
 }
