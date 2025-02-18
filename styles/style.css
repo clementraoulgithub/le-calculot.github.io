@@ -1855,7 +1855,7 @@ body {
     }
 
     .slide > img {
-        max-height: 280px;
+        max-height: 250px;
     }
 }
 
@@ -2002,12 +2002,6 @@ body {
     border-radius: 10px;
     margin-bottom: 25px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-@media (max-width: 768px) { /* Ajuste la largeur selon ton besoin */
-    .map > img {
-        width: fit-content;
-    }
 }
 
 .back-to-home {
