@@ -94,8 +94,9 @@ function displayReviews() {
     button.textContent = "Réserver";
     button.classList.add("reservation-button");
     const linkButton = document.createElement("a");
-    linkButton.href = "https://www.airbnb.fr/rooms/1160899826600585254?guests=1&amp;adults=1&amp;s=67&amp;unique_share_id=d4d04081-bfa3-41c7-bb94-7b516c5217f7";
-    reviewsContainer.appendChild(button);
+    linkButton.href = "https://www.airbnb.com/l/4hJy5GTd";
+    linkButton.appendChild(button);
+    reviewsContainer.appendChild(linkButton);
 
     // Update index for the next display
     currentReviewIndex = (currentReviewIndex + reviewsPerPage) % reviews.length;
