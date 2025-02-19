@@ -65,7 +65,7 @@ function displayReviews() {
 
     const map = document.createElement("div");
     map.classList.add("map");
-    map.innerHTML = `<img src="image/la-marina-image/map-image/map.png" alt="Carte Barcares"/>`;
+    map.innerHTML = `<img src="image/la-marina-image/map-image/map.jpg" alt="Carte Barcares"/>`;
     reviewsContainer.appendChild(map);
 
     const button = document.createElement("button");
