@@ -10,7 +10,6 @@
 </head>
 
 <body>
-  <script type="text/javascript" src="scripts/le-calculot.js" defer></script>
   <div id="wrapwrap" class="homepage o_header_overlay">
     <a class="o_skip_to_content btn btn-primary rounded-0 visually-hidden-focusable position-absolute start-0"
       href="#wrap">Se rendre au contenu</a>
@@ -283,7 +282,7 @@
               display: none;
             }
     
-            @media (max-width: 768px) {
+            @media (max-width: 860px) {
                 .logements-container {
                   grid-template-columns: 1fr;
                 }
@@ -291,7 +290,8 @@
                 .logement .info {
                   padding-bottom: 0px;
                 }
-
+            }
+            @media (max-width: 1200px) {
                 .capacite span {
                   display: none; /* Cache le texte "X personnes" */
                 }
@@ -305,8 +305,9 @@
                 .capacite strong {
                   display: inline; /* Affiche seulement le nombre */
                 }
-
             }
+
+
         </style>
 
           <div class="o_we_shape o_web_editor_Connections_02 o_shape_show_mobile" style="
@@ -416,6 +417,7 @@
   </div>
   </footer>
   </div>
+  <script type="text/javascript" src="scripts/empty.js"></script>
 </body>
 
 </html>
