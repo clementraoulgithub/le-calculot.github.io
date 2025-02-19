@@ -144,6 +144,8 @@
                 <div class="info">
                   <div class="capacite">
                     <span>2 voyageurs</span>
+                    <img src="image/svg/person.svg" alt="Capacité">
+                    <strong>2</strong>
                 </div>
                     <h3>Le calculot</h3>
                     <p>Perros-Guirec, France</p>
@@ -154,6 +156,8 @@
                 <div class="info">
                   <div class="capacite">
                     <span>2 voyageurs</span>
+                    <img src="image/svg/person.svg" alt="Capacité">
+                    <strong>2</strong>
                 </div>
                     <h3>Le cosy</h3>
                     <p>Perros-Guirec, France</p>
@@ -165,6 +169,8 @@
                 <div class="info">
                   <div class="capacite">
                     <span>4 voyageurs</span>
+                    <img src="image/svg/person.svg" alt="Capacité">
+                    <strong>4</strong>
                 </div>
                     <h3>La marina</h3>
                     <p>Le barcares, France</p>
@@ -176,6 +182,8 @@
               <div class="info">
                 <div class="capacite">
                   <span>2 voyageurs</span>
+                  <img src="image/svg/person.svg" alt="Capacité">
+                  <strong>2</strong>
               </div>
                   <h3>Le hublot</h3>
                   <p>Le barcares, France</p>
@@ -244,16 +252,16 @@
             }
 
             .wip {
-                position: absolute;
-                top: 10px;
-                right: 0;
-                background-color: white;
-                color: #555;
-                padding: 10px 15px;
-                border-radius: 20px 0 0 20px;
-                font-weight: bold;
-                font-size: 14px;
-                box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+              position: absolute;
+              top: 10px;
+              right: 0;
+              background-color: white;
+              color: #555;
+              padding: 10px 15px;
+              border-radius: 20px 0 0 20px;
+              font-weight: bold;
+              font-size: 14px;
+              box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
             }
 
             .capacite {
@@ -269,6 +277,11 @@
               align-items: center;
               gap: 5px;
             }
+
+            .capacite img,
+            .capacite strong {
+              display: none;
+            }
     
             @media (max-width: 768px) {
                 .logements-container {
@@ -279,9 +292,20 @@
                   padding-bottom: 0px;
                 }
 
-                .logement h3 {
-                  margin-top: 50px;
+                .capacite span {
+                  display: none; /* Cache le texte "X personnes" */
                 }
+
+                .capacite img {
+                  display: inline; /* Affiche l'icône */
+                  width: 22px;
+                  height: 22px;
+                }
+
+                .capacite strong {
+                  display: inline; /* Affiche seulement le nombre */
+                }
+
             }
         </style>
 
