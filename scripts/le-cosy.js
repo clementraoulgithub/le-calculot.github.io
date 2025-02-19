@@ -16,31 +16,31 @@ let currentIndex = 0;
 const reviews = [
     { 
         name: "Cathy", 
-        text: "Studio fonctionnel,très bien situé avec vue sur la plage, restaurants proches et Sentiers des douaniers, juste à côté. Un petit cadeau local nous attendait sur la table.", 
+        text: "Studio fonctionnel, très bien situé avec vue sur la plage, restaurants et sentiers des douaniers juste à côté.", 
         img: "https://a0.muscache.com/im/pictures/user/User-537114708/original/d1a4e46d-ae26-46f1-9ba7-6ad4d00b6c98.jpeg?im_w=240&im_format=avif", 
         rating: 5 
     },
     { 
         name: "Margaux", 
-        text: "Vue magnifique commerce à proximité balade à couper le souffle le logement est propre et accueillant merci beaucoup", 
+        text: "Vue magnifique commerce à proximité balade à couper le souffle le logement est propre et accueillant.", 
         img: "https://a0.muscache.com/im/pictures/user/03449366-4bd2-4e67-a010-b25c69f95bc1.jpg?im_w=240&im_format=avif", 
         rating: 5
     },
     { 
         name: "Fabrice", 
-        text: "Studio impeccable , idéalement situé dans cette belle région , tout à porté de main , resto , superette , sentier des douaniers de la côte de granit rose ( magnifique !)", 
+        text: "Studio impeccable , idéalement situé dans cette belle région, tout à porté de main.", 
         img: "https://a0.muscache.com/im/pictures/user/232c88c9-b877-4ecf-b8aa-86b0babbdcb9.jpg?im_w=240&im_format=avif", 
         rating: 5 
     },
     { 
         name: "Olivier", 
-        text: "Appartement propre et très agréable, bien agencé, je recommande", 
+        text: "Appartement propre et très agréable, bien agencé, je recommande.", 
         img: "https://a0.muscache.com/im/pictures/user/22a6e666-d0fd-48bf-8fda-4d82f2286982.jpg?im_w=240&im_format=avif", 
         rating: 5
     },
     { 
         name: "Andreza", 
-        text: "Nous avons passé une magnifique semaine de soleil avec l' imprenable vue sur la plage depuis le balcon. Justine a été très réactive quand nous l'avons sollicité.", 
+        text: "Nous avons passé une magnifique semaine de soleil avec l'imprenable vue sur la plage depuis le balcon.", 
         img: "https://a0.muscache.com/im/pictures/user/ffc42fd5-93ec-446e-ab6c-776b1670e90c.jpg?im_w=240&im_format=avif", 
         rating: 4
     }

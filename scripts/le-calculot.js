@@ -16,7 +16,7 @@ let currentIndex = 0;
 const reviews = [
     { 
         name: "Régis", 
-        text: "Le logement est parfait pour un week-end. Il est très bien équipé et l’emplacement est top. La vue est magnifique. Je recommande ce logement :)", 
+        text: "Le logement est très bien équipé et l’emplacement est top.", 
         img: "https://a0.muscache.com/im/pictures/user/User-138675833/original/02460210-74c3-4448-9ace-2f3f2072cf82.jpeg?im_w=240&im_format=avif", 
         rating: 5 
     },
@@ -40,7 +40,7 @@ const reviews = [
     },
     { 
         name: "Lisa", 
-        text: "Appartement fidèle à l'annonce , très beau point de vue . Bien situé sur la côte de granit rose pour tous les amateurs de cailloux", 
+        text: "Bien situé sur la côte de granit rose pour tous les amateurs de cailloux.", 
         img: "https://a0.muscache.com/im/pictures/user/68b26ee8-171a-4a13-a25a-531291393fcd.jpg?im_w=240&im_format=avif", 
         rating: 5
     }
