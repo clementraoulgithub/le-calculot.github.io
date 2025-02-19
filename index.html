@@ -139,11 +139,14 @@
         </section>
         <section class="s_embed_code o_colored_level pt48 pb80 text-start" data-snippet="s_embed_code" style="position: relative">
           <div class="logements-container">
-            <a href="le-calculot.html"><div class="logement"><span class="coup-de-coeur">❤️ Coup de cœur</span>
+            <a href="le-calculot.html"><div class="logement"><span class="coup-de-coeur">Coup de cœur voyageurs</span>
                 <img src="image/le-calculot-image/1.webp" alt="Le calculot">
                 <div class="info">
                     <h3>Le calculot</h3>
                     <p>Perros-Guirec, France</p>
+                    <div class="capacite">
+                      <span>2 voyageurs</span>
+                  </div>
                 </div>
             </div></a>
             <a href="le-cosy.html"><div class="logement">
@@ -151,15 +154,31 @@
                 <div class="info">
                     <h3>Le cosy</h3>
                     <p>Perros-Guirec, France</p>
+                    <div class="capacite">
+                      <span>2 voyageurs</span>
+                  </div>
                 </div>
             </div></a>
-            <div class="logement"><span class="wip">A venir</span>
+            <a href="index.html"><div class="logement"><span class="wip">A venir</span>
                 <img src="image/la-marina-image/1.jpg" alt="Work in progress">
                 <div class="info">
                     <h3>La marina</h3>
                     <p>Le barcares, France</p>
+                    <div class="capacite">
+                      <span>4 voyageurs</span>
+                  </div>
                 </div>
-            </div>
+            </div></a>
+            <a href="index.html"><div class="logement"><span class="wip">A venir</span>
+              <img src="image/le-hublot-image/1.jpg" alt="Work in progress">
+              <div class="info">
+                  <h3>Le hublot</h3>
+                  <p>Le barcares, France</p>
+                  <div class="capacite">
+                    <span>2 voyageurs</span>
+                </div>
+              </div>
+          </div></a>
           </div>
           <style>
             .logements-container {
@@ -195,7 +214,9 @@
             }
     
             .logement .info {
-                padding: 15px;
+              padding: 15px;
+              position: relative;
+              padding-bottom: 30px;
             }
     
             .logement h3 {
@@ -210,8 +231,8 @@
                 position: absolute;
                 top: 10px;
                 right: 0;
-                background-color: rgb(255, 83, 83);
-                color: white;
+                background-color: white;
+                color: #555;
                 padding: 10px 15px;
                 border-radius: 20px 0 0 20px;
                 font-weight: bold;
@@ -223,18 +244,42 @@
                 position: absolute;
                 top: 10px;
                 right: 0;
-                background-color: rgb(48, 72, 254);
-                color: white;
+                background-color: white;
+                color: #555;
                 padding: 10px 15px;
                 border-radius: 20px 0 0 20px;
                 font-weight: bold;
                 font-size: 14px;
                 box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
             }
+
+            .capacite {
+              position: absolute;
+              bottom: 15px; /* Augmente la distance du bas */
+              left: 10px;
+              color: #555;
+              padding: 8px 12px; /* Augmente l'espacement interne */
+              border-radius: 10px;
+              font-weight: bold;
+              font-size: 14px;
+              box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+              display: flex;
+              align-items: center;
+              gap: 5px;
+            }
     
             @media (max-width: 768px) {
                 .logements-container {
-                    grid-template-columns: 1fr;
+                  grid-template-columns: 1fr;
+                }
+
+                .capacite {
+                  left: 50%;
+                  transform: translateX(-50%);
+                }
+
+                .logement .info {
+                  padding-bottom: 60px; /* Encore plus d'espace pour le mobile */
                 }
             }
         </style>

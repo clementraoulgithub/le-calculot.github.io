@@ -60,6 +60,15 @@ function displayReviews() {
     reviewsContainer.appendChild(map);
 
 
+    const button = document.createElement("button");
+    button.textContent = "Réserver";
+    button.classList.add("reservation-button");
+    const linkButton = document.createElement("a");
+    linkButton.href = "https://www.airbnb.com/l/4hJy5GTd";
+    linkButton.appendChild(button);
+    reviewsContainer.appendChild(linkButton);
+
+
     const link_container = document.createElement("div");
     link_container.classList.add("link-container");
     reviewsContainer.appendChild(link_container);
@@ -90,13 +99,6 @@ function displayReviews() {
         setTimeout(() => card.classList.add("visible"), i * 300);
     }
 
-    const button = document.createElement("button");
-    button.textContent = "Réserver";
-    button.classList.add("reservation-button");
-    const linkButton = document.createElement("a");
-    linkButton.href = "https://www.airbnb.com/l/4hJy5GTd";
-    linkButton.appendChild(button);
-    reviewsContainer.appendChild(linkButton);
 
     // Update index for the next display
     currentReviewIndex = (currentReviewIndex + reviewsPerPage) % reviews.length;
@@ -261,7 +263,7 @@ function toggleExpand() {
     let textBlock = document.querySelector('.text-block');
     let button = document.querySelector('.expand-button');
     textBlock.classList.toggle('expanded');
-    button.textContent = textBlock.classList.contains('expanded') ? "Voir moins" : "Voir plus";
+    button.textContent = textBlock.classList.contains('expanded') ? "Voir moins" : "Lire la suite";
 
     if (!textBlock.classList.contains('expanded')) {
         textBlock.scrollIntoView({ behavior: 'smooth' });
