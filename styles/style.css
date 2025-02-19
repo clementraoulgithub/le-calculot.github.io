@@ -1355,14 +1355,6 @@ img.o_we_custom_image {
     background-repeat: no-repeat no-repeat;
 }
 
-/* /web_editor/static/src/scss/web_editor.frontend.scss */
-
-/* @media (max-width: 767.98px) {
-    .o_we_shape:not(.o_shape_show_mobile) {
-        display: none;
-    }
-} */
-
 .o_grid_mode {
     --grid-item-padding-y: 10px;
     --grid-item-padding-x: 10px;
@@ -1387,7 +1379,6 @@ img.o_we_custom_image {
 @media (min-width: 992px) {
     .o_grid_mode {
         display: grid !important;
-        grid-auto-rows: 50px;
         grid-template-columns: repeat(12, 1fr);
         row-gap: 0px;
         column-gap: 0px;
@@ -1472,9 +1463,6 @@ li > p {
     clear: both;
 }
 
-/* #wrap .navbar > .container::before, #wrap .navbar > .container-fluid::before, #wrap .navbar > .container::after, #wrap .navbar > .container-fluid::after {
-    display: none;
-} */
 
 [class^="col-lg-"] {
     min-height: 24px;
@@ -1505,7 +1493,6 @@ li > p {
 }
 
 
-/* /website/static/src/scss/website.scss */
 :root {
     --o-border-color: #DEE2E6;
     --o-border-color: color-mix(in srgb, currentColor 15%, transparent);
@@ -1534,10 +1521,6 @@ li > p {
     flex-wrap: nowrap !important;
 }
 
-/* .navbar .top_menu.o_menu_loading {
-    overflow: hidden !important;
-    opacity: 0 !important;
-} */
 
 .navbar-light {
     background-color: rgba(0, 0, 0, 0.5);
@@ -2027,13 +2010,13 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     background-color: #f9f9f9;
     overflow: hidden;
-    height: 200px;
-    transition: height 0.3s ease-in-out;
-    position: relative;
+    max-height: 200px;
+    transition: max-height 0.3s ease-in-out;
 }
 
+
 .text-block.expanded {
-    height: auto;
+    max-height: 100%;
 }
 
 .text-block p {
@@ -2041,14 +2024,20 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: normal;
-    max-height: none;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
     white-space: pre-line;
 }
 
+.text-block.expanded p {
+    -webkit-line-clamp: unset;
+}
+
+
 .expand-button {
-    position: absolute;
-    bottom: 1px;
-    right: 10px;
+    display: block;
+    margin-top: 10px;
     background-color: transparent;
     color: black;
     font-weight: bold;
