@@ -15,12 +15,45 @@ let currentIndex = 0;
 
 const reviews = [
     { 
-        name: "to do", 
-        text: "", 
-        img: "", 
+        name: "Alice", 
+        text: "Une marina magnifique avec une superbe vue sur les bateaux. Ambiance très apaisante !", 
+        img: "https://randomuser.me/api/portraits/women/1.jpg", 
         rating: 5 
+    },
+    { 
+        name: "Jean", 
+        text: "Endroit parfait pour se détendre, avec de bons restaurants à proximité. J'y reviendrai !", 
+        img: "https://randomuser.me/api/portraits/men/2.jpg", 
+        rating: 4.5 
+    },
+    { 
+        name: "Sophie", 
+        text: "Séjour inoubliable ! Le cadre est splendide et l'accueil très chaleureux.", 
+        img: "https://randomuser.me/api/portraits/women/3.jpg", 
+        rating: 5 
+    },
+    { 
+        name: "Thomas", 
+        text: "Très bel endroit pour une balade en bord de mer. L'eau est limpide et le port bien entretenu.", 
+        img: "https://randomuser.me/api/portraits/men/4.jpg", 
+        rating: 4.5 
+    },
+    { 
+        name: "Emma", 
+        text: "Logement impeccable avec une superbe vue sur la marina. Je recommande sans hésiter !", 
+        img: "https://randomuser.me/api/portraits/women/5.jpg", 
+        rating: 5 
+    },
+    { 
+        name: "Lucas", 
+        text: "Un vrai coin de paradis au Barcarès. Calme, propre et idéal pour se ressourcer.", 
+        img: "https://randomuser.me/api/portraits/men/6.jpg", 
+        rating: 4.7 
     }
 ];
+
+
+
 
 function generateStars(rating) {
     return "★".repeat(rating) + "☆".repeat(5 - rating);
@@ -39,7 +72,7 @@ function displayReviews() {
     button.textContent = "Réserver";
     button.classList.add("reservation-button");
     const linkButton = document.createElement("a");
-    linkButton.href = "https://www.airbnb.fr/rooms/1160899826600585254?guests=1&amp;adults=1&amp;s=67&amp;unique_share_id=d4d04081-bfa3-41c7-bb94-7b516c5217f7";
+    linkButton.href = "https://www.leboncoin.fr/ad/locations_saisonnieres/2231552985";
     linkButton.appendChild(button);
     reviewsContainer.appendChild(linkButton);
 
@@ -51,8 +84,8 @@ function displayReviews() {
 
     const link = document.createElement("a");
     link.classList.add("black");
-    link.href = "https://www.airbnb.fr/rooms/1160899826600585254/reviews?search_mode=regular_search&adults=1&check_in=2025-03-03&check_out=2025-03-08&children=0&infants=0&pets=0&source_impression_id=p3_1739721997_P3hEuhNgaNwy5hKk&previous_page_section_name=1000&federated_search_id=a52c5b83-b47e-4f46-a3c3-2216590192b1"
-    link.textContent = "4,74 ★ - Voir tous les avis";
+    link.href = ""
+    link.textContent = "4,5 ★ - Voir tous les avis";
     link_container.appendChild(link);
 
     // Select 3 reviews to display
