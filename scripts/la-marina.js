@@ -45,9 +45,10 @@ function displayReviews() {
     reviewsContainer.appendChild(map);
 
     const button = document.createElement("button");
-    button.textContent = "Réserver";
+    button.textContent = "Vérifier la disponibilité";
     button.classList.add("reservation-button");
     const linkButton = document.createElement("a");
+    linkButton.classList.add("link-button");
     linkButton.href = "https://www.leboncoin.fr/ad/locations_saisonnieres/2231552985";
     linkButton.appendChild(button);
     reviewsContainer.appendChild(linkButton);
