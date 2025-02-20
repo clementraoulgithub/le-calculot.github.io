@@ -253,10 +253,26 @@ function toggleExpand() {
     }
 }
 
+// Get the image active and if it is hover show the arrow hide if not
+function showArrow() {
+    let image = document.querySelector('.carousel');
+    let nextArrow = document.getElementById('nextArrow');
+    let prevArrow = document.getElementById('prevArrow');
+    image.addEventListener('mouseover', () => {
+        nextArrow.style.display = 'flex';
+        prevArrow.style.display = 'flex';
+    });
+    image.addEventListener('mouseout', () => {
+        nextArrow.style.display = 'none';
+        prevArrow.style.display = 'none';
+    });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     createLightbox();
     displayReviews();
     createCarousel();
+    showArrow();
     setInterval(() => {
         displayReviews();
     }, intervalTime);
