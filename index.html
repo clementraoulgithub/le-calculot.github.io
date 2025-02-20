@@ -142,7 +142,6 @@
                 <img src="image/le-calculot-image/1.webp" alt="Le calculot">
                 <div class="info">
                   <div class="capacite">
-                    <span>2 voyageurs</span>
                     <img src="image/svg/person.svg" alt="Capacité">
                     <strong>2</strong>
                 </div>
@@ -154,7 +153,6 @@
                 <img src="image/le-cosy-image/1.avif" alt="Le cosy">
                 <div class="info">
                   <div class="capacite">
-                    <span>2 voyageurs</span>
                     <img src="image/svg/person.svg" alt="Capacité">
                     <strong>2</strong>
                 </div>
@@ -167,7 +165,6 @@
                 <img src="image/la-marina-image/1.jpeg" alt="La marina">
                 <div class="info">
                   <div class="capacite">
-                    <span>4 voyageurs</span>
                     <img src="image/svg/person.svg" alt="Capacité">
                     <strong>4</strong>
                 </div>
@@ -180,7 +177,6 @@
               <img src="image/le-hublot-image/1.jpeg" alt="Le hublot">
               <div class="info">
                 <div class="capacite">
-                  <span>2 voyageurs</span>
                   <img src="image/svg/person.svg" alt="Capacité">
                   <strong>2</strong>
               </div>
@@ -193,7 +189,7 @@
           <style>
             .logements-container {
                 display: grid;
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: repeat(4, 1fr);
                 gap: 20px;
                 padding: 20px;
             }
@@ -265,48 +261,34 @@
 
             .capacite {
               position: absolute;
-              left: 10px;
+              right: 10px;
+              top: 5px;
               color: #555;
               padding: 8px 12px; /* Augmente l'espacement interne */
               border-radius: 10px;
               font-weight: bold;
               font-size: 14px;
-              box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
               display: flex;
               align-items: center;
               gap: 5px;
             }
 
-            .capacite img,
-            .capacite strong {
-              display: none;
+            .capacite img {
+              display: inline; /* Affiche l'icône */
+              width: 22px;
+              height: 22px;
             }
+
+            .capacite strong {
+              display: inline; /* Affiche seulement le nombre */
+            }
+
     
             @media (max-width: 860px) {
-                .logements-container {
-                  grid-template-columns: 1fr;
-                }
-
-                .logement .info {
-                  padding-bottom: 0px;
-                }
+              .logements-container {
+                grid-template-columns: 1fr;
+              }
             }
-            @media (max-width: 1200px) {
-                .capacite span {
-                  display: none; /* Cache le texte "X personnes" */
-                }
-
-                .capacite img {
-                  display: inline; /* Affiche l'icône */
-                  width: 22px;
-                  height: 22px;
-                }
-
-                .capacite strong {
-                  display: inline; /* Affiche seulement le nombre */
-                }
-            }
-
 
         </style>
 
