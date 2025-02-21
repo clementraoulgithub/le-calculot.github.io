@@ -1968,6 +1968,19 @@ body {
     width: 100%;
 }
 
+@media (max-width: 768px) { /* Ajuste la largeur selon ton besoin */
+    .reservation-button {
+        position: fixed;
+        z-index: 1000;
+        bottom: 0px;
+    }
+    .back-to-home {
+        top: 20px;
+        bottom: auto;
+    }
+}
+
+
 .link-button {
     width: 100%;
 }
