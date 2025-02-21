@@ -1976,9 +1976,7 @@ body {
         width: 92%;
     }
     .back-to-home {
-        top: 20px;
-        bottom: auto !important;
-    }
+        display: none;
 }
 
 
