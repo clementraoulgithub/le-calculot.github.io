@@ -1973,6 +1973,7 @@ body {
         position: fixed;
         z-index: 1000;
         bottom: 0px;
+        width: 92%;
     }
     .back-to-home {
         top: 20px;
