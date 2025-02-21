@@ -4,7 +4,7 @@ let currentReviewIndex = 0;
 let currentListingIndex = 0;
 
 const reviewsPerPage = 2;
-const intervalTime = 7000;
+const intervalTime = 10000;
 
 let isMobile = window.innerWidth <= 768;
 
