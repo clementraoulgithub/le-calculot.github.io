@@ -136,7 +136,9 @@
           </div>
         </section>
         <section class="s_embed_code o_colored_level pt48 pb80 text-start" data-snippet="s_embed_code" style="position: relative">
+          <div class="logement-title"><h4>La Bretagne<hr class="horizontal-line"></h4><h4>L'Occitanie<hr class="horizontal-line"></h4></div>
           <div class="logements-container">
+            <div class="logement-title-mobile"><h4>La Bretagne<hr class="horizontal-line"></h4></div>
             <a href="le-calculot.html"><div class="logement"><span class="coup-de-coeur">Coup de cœur voyageurs</span>
                 <img src="image/le-calculot-image/1.webp" alt="Le calculot">
                 <div class="info">
@@ -160,6 +162,7 @@
 
                 </div>
             </div></a>
+            <div class="logement-title-mobile"><h4>L'Occitanie<hr class="horizontal-line"></h4></div>
             <a href="la-marina.html"><div class="logement">
                 <img src="image/la-marina-image/1.avif" alt="La marina">
                 <div class="info">
@@ -186,6 +189,24 @@
           </div></a>
           </div>
           <style>
+            .logement-title {
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              padding-left: 20px;
+            }
+
+            .logement-title-mobile {
+              display: none;
+              padding-left: 20px;
+            }
+
+            .horizontal-line {
+                border: none;
+                height: 1px; 
+                background-color: #000; 
+                margin-right: 66%;
+            }
+
             .logements-container {
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
@@ -286,6 +307,16 @@
             @media (max-width: 860px) {
               .logements-container {
                 grid-template-columns: 1fr;
+              }
+
+              .logement-title {
+                display: none;
+              }
+              .logement-title-mobile {
+                display: block;
+              }
+              .pt48 {
+                padding-top: 10px !important;
               }
             }
 
