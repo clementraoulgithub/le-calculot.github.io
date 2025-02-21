@@ -1777,9 +1777,9 @@ body {
 }
 
 
-.arrow {
-    width: 3rem;
-    height: 3rem;
+.arrow, .arrow-lightbox  {
+    width: 2.5rem;
+    height: 2.5rem;
     z-index: 2;
     background: none;
     border: none;
@@ -1812,25 +1812,27 @@ body {
     border: 1px solid rgb(211, 211, 211);
     display: flex;
     transform: translateY(-50%); 
+    align-items: center;
+    justify-content: center;
 }
 
 .arrow img {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.2rem;
+    height: 1.2rem;
 }
 
+
 .arrow:hover {
+    transform: translateY(-50%) scale(1.1);  /* Agrandir au survol sans bouger verticalement */
+    transform-origin: center;  /* Assure que l'agrandissement se fait à partir du centre */
     background-color: rgb(255, 255, 255);
 }
 
 .arrow-lightbox:hover {
+    transform-origin: center;
+    transform: translateY(-50%) scale(1.1);
     background-color: rgba(0, 0, 0, 0.605);
 }
-
-.arrow:hover img {
-    transform: scale(1.1);
-}
-
 
 .arrow.next {
     right: 2%;
@@ -1927,8 +1929,8 @@ body {
 }
 
 .dot {
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     margin: 0 5px;
     background-color: #bbb;
     border-radius: 50%;
@@ -1939,7 +1941,7 @@ body {
 
 .dot.active {
     background-color: #ffffff;
-    transform: scale(1.2);
+    transform: scale(1.3);
 }
 
 .black {
@@ -1997,13 +1999,24 @@ body {
 .map {
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 .map > img {
+    width: 100%;
     height: 200px;
     border-radius: 10px;
     margin-bottom: 25px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) { /* Ajuste la largeur selon ton besoin */
+    .map {
+        width: auto;
+    }
+    .map > img {
+        width: auto;
+    }
 }
 
 .back-to-home {
