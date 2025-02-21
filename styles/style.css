@@ -1976,7 +1976,7 @@ body {
     }
     .back-to-home {
         top: 20px;
-        bottom: auto;
+        bottom: auto !important;
     }
 }
 
