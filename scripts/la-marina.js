@@ -247,7 +247,7 @@ function toggleExpand() {
     let textBlock = document.querySelector('.text-block');
     let button = document.querySelector('.expand-button');
     textBlock.classList.toggle('expanded');
-    button.textContent = textBlock.classList.contains('expanded') ? "Voir moins" : "Lire la suite";
+    button.textContent = textBlock.classList.contains('expanded') ? "Voir moins <" : "Lire la suite >";
 
     if (!textBlock.classList.contains('expanded')) {
         textBlock.scrollIntoView({ behavior: 'smooth' });
