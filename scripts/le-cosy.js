@@ -3,8 +3,8 @@ const reviewsContainer = document.getElementById("reviews");
 let currentReviewIndex = 0;
 let currentListingIndex = 0;
 
-const reviewsPerPage = 3;
-const intervalTime = 15000;
+const reviewsPerPage = 4;
+const intervalTime = 20000;
 
 let isMobile = window.innerWidth <= 768;
 
