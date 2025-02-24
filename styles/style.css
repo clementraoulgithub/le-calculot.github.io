@@ -2053,10 +2053,11 @@ body {
 .text-block {
     width: 100%;
     margin: 20px auto;
-    padding: 20px;
+    padding-bottom: 10px;
+    /* padding: 20px; */
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    background-color: #ffffff;
     overflow: hidden;
     max-height: 200px;
     transition: max-height 0.3s ease-in-out;
@@ -2180,11 +2181,12 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
-    padding: 20px;
-    background: #f9f9f9;
+    padding-bottom: 10px;
+    /* padding: 20px; */
+    background: #ffffff;
     border-radius: 10px;
     justify-content: space-between;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
 }
 
 .feature-group {
@@ -2223,4 +2225,13 @@ body {
     .feature-group {
         flex-direction: column;
     }
+}
+
+.custom-line {
+    border: none;
+    height: 0.5px; /* Épaisseur fine */
+    background-color: #ccc; /* Gris */
+    margin: 10px 0; /* Espacement */
+    width: 100%; /* Prend toute la largeur */
+
 }
