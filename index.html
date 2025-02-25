@@ -145,13 +145,13 @@
           </div>
         </section>
         <section class="s_embed_code o_colored_level pt48 pb80 text-start" data-snippet="s_embed_code" style="position: relative">
-          <div class="logement-title">
+          <div class="logement-title container">
             <h4>La Bretagne</h4>
             <h4>L'Occitanie</h4>
           </div>
-          <div class="logements-container">
+          <div class="container logements-container">
             <div class="logement-title-mobile"><h4>La Bretagne</h4></div>
-            <a href="le-calculot.html"><div class="logement">
+            <a href="le-calculot.html"><div class="logement"><span class="coup-de-coeur">Coup de coeur</span>
                 <img src="image/le-calculot-image/1.webp" alt="Le calculot">
                 <div class="info">
                   <div class="capacite">
@@ -220,10 +220,9 @@
           </div>
           <style>
             .logement-title {
-              display: grid;
-              grid-template-columns: repeat(2, 1fr);
+              display: flex;
+              align-items: stretch;
               padding-left: 20px;
-              max-width: 1500px;
               margin: auto;
             }
 
@@ -233,24 +232,23 @@
             }
 
             .logement-title h4 {
-              margin: 0;
+              flex: 1;
             }
 
             .logements-container {
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                gap: 20px;
-                padding: 20px;
-                max-width: 1500px;
+                display: flex;
                 margin: auto;
             }
 
             .logements-container a {
+                flex: 1;
+                margin: 10px;
                 text-decoration: none;
                 color: inherit;
             }
     
             .logement {
+                height: 100%;
                 border: 1px solid #ddd;
                 border-radius: 10px;
                 overflow: hidden;
@@ -271,6 +269,7 @@
             }
     
             .logement .info {
+              height: 100%;
               padding: 0px;
               position: relative;
             }
@@ -338,13 +337,15 @@
     
             @media (max-width: 860px) {
               .logements-container {
-                grid-template-columns: 1fr;
+                display: block;
               }
 
               .logement-title {
                 display: none;
               }
               .logement-title-mobile {
+                padding-top: 10px;
+                margin-bottom: 0px;
                 display: block;
               }
               .pt48 {
