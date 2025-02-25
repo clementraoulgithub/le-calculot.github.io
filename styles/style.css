@@ -2236,3 +2236,13 @@ body {
     width: 100%; /* Prend toute la largeur */
 
 }
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .hidden {
+        display: block;
+    }
+}
