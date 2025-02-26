@@ -284,9 +284,6 @@ document.addEventListener("DOMContentLoaded", () => {
     displayReviews();
     createCarousel();
     showArrow();
-    setInterval(() => {
-        displayReviews();
-    }, intervalTime);
 });
 
 
