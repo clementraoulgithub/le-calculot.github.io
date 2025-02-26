@@ -72,6 +72,11 @@ function displayReviews() {
 
     const link_container = document.createElement("div");
     link_container.classList.add("link-container");
+
+    const descriptionTitle = document.createElement("h4");
+    descriptionTitle.textContent = "Commentaires";
+    descriptionTitle.classList.add("comments-title");
+    link_container.appendChild(descriptionTitle);
     reviewsContainer.appendChild(link_container);
 
 

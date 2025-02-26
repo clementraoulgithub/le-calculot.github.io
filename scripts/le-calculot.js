@@ -71,14 +71,20 @@ function displayReviews() {
 
     const link_container = document.createElement("div");
     link_container.classList.add("link-container");
-    reviewsContainer.appendChild(link_container);
 
+
+    const descriptionTitle = document.createElement("h4");
+    descriptionTitle.textContent = "Commentaires";
+    descriptionTitle.classList.add("comments-title");
+    link_container.appendChild(descriptionTitle);
+    reviewsContainer.appendChild(link_container);
 
     const link = document.createElement("a");
     link.classList.add("black");
     link.href = "https://www.airbnb.fr/rooms/1160899826600585254/reviews?search_mode=regular_search&adults=1&check_in=2025-03-03&check_out=2025-03-08&children=0&infants=0&pets=0&source_impression_id=p3_1739721997_P3hEuhNgaNwy5hKk&previous_page_section_name=1000&federated_search_id=a52c5b83-b47e-4f46-a3c3-2216590192b1"
     link.textContent = "4,74 ★ - Voir tous les avis";
     link_container.appendChild(link);
+
 
     // Select 3 reviews to display
     for (let i = 0; i < reviewsPerPage; i++) {
