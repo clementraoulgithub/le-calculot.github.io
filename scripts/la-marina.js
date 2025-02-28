@@ -52,6 +52,7 @@ function displayReviews() {
 
     const link = document.createElement("a");
     link.classList.add("black");
+    link.classList.add("review-link");
     link.href = ""
     link.textContent = "5 ★ - Voir tous les avis";
     reviewTitle.appendChild(link);
@@ -66,8 +67,9 @@ function displayReviews() {
             <div class="review-header">
                 <img src="${review.img}" alt="Avatar">
                 <div class="review-name">${review.name}</div>
-                <div class="stars">${generateStars(review.rating)}</div>
+
             </div>
+            <div class="stars">${generateStars(review.rating)}</div>
             <p class="review-text">${review.text}</p>
         `;
         reviewsContainer.appendChild(card);
