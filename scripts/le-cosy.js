@@ -56,7 +56,7 @@ function displayReviews() {
 
     const map = document.createElement("div");
     map.classList.add("map");
-    map.innerHTML = `<img src="image/le-calculot-image/map-image/map.jpg" alt="Carte Perros-Guirec"/>`;
+    map.innerHTML = `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d84024.05070004266!2d-3.5388893642617334!3d48.84387691655516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48122de6cbd6245b%3A0x40ca5cd36e630e0!2sPerros-Guirec!5e0!3m2!1sfr!2sfr!4v1740747362664!5m2!1sfr!2sfr" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`;
     reviewsContainer.appendChild(map);
 
 
