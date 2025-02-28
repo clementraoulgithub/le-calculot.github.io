@@ -2114,35 +2114,15 @@ body {
 }
 
 /* Avis à droite (1/3 de la largeur) */
-.reviews-container {
+.img-containers {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex: 1;
     max-width: 33%;
     height: 100%;
 }
 
-
-/* Avis */
-.review-card {
-    background: white;
-    border-radius: 10px;
-    padding: 5px;
-    /* margin-bottom: 40px; */
-    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.5s ease-in-out;
-    width: 100%;
-    height: 130px;
-}
-
-.review-card.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
 
 .review-header {
     display: flex;
@@ -2216,7 +2196,7 @@ body {
     }
 
     .airbnb-embed,
-    .reviews-container {
+    .img-containers {
         max-width: 100%;
     }
 
@@ -2242,4 +2222,67 @@ body {
     .hidden {
         display: block;
     }
+}
+
+.map-title {
+    align-self: flex-start;
+}
+
+.reviews-images {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    height: 400px;
+    margin-bottom: 20px;
+}
+
+.reviews-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.review-title {
+    display: flex;
+    gap: 10px;
+
+}
+
+.reviews-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .reviews-container{
+        display: block;
+    }
+}
+
+.bottom-review {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.review-card {
+    flex: 1;
+    background: white;
+    border-radius: 10px;
+    padding: 5px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+    height: 130px;
+}
+
+.review-card.visible {
+    opacity: 1;
+    transform: translateY(0);
 }

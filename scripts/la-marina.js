@@ -1,4 +1,4 @@
-const reviewsContainer = document.getElementById("reviews");
+const bottomReview = document.getElementById("reviews");
 
 let currentReviewIndex = 0;
 let currentListingIndex = 0;
@@ -35,40 +35,28 @@ function generateStars(rating) {
 
 function displayReviews() {
     // Clear previous reviews
+    const reviewsContainer = document.createElement("div");
     reviewsContainer.innerHTML = "";
+    reviewsContainer.classList.add("reviews-container");
 
-    const map = document.createElement("div");
-    map.classList.add("map");
-    map.innerHTML = `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46830.21784018984!2d2.986919721890951!3d42.811839780934946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b060ba903c3217%3A0x407882116676f00!2s66420%20Le%20Barcar%C3%A8s!5e0!3m2!1sfr!2sfr!4v1740747737549!5m2!1sfr!2sfr" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`;
-    reviewsContainer.appendChild(map);
+    bottomReview.classList.add("bottom-review");
+    bottomReview.innerHTML = "";
 
-    const button = document.createElement("button");
-    button.textContent = "Vérifier la disponibilité";
-    button.classList.add("reservation-button");
-    const linkButton = document.createElement("a");
-    linkButton.classList.add("link-button");
-    linkButton.href = "https://www.leboncoin.fr/ad/locations_saisonnieres/2231552985";
-    linkButton.appendChild(button);
-    reviewsContainer.appendChild(linkButton);
-
-
-    const link_container = document.createElement("div");
-    link_container.classList.add("link-container");
-
-    const descriptionTitle = document.createElement("h4");
-    descriptionTitle.textContent = "Commentaires";
-    descriptionTitle.classList.add("comments-title");
-    link_container.appendChild(descriptionTitle);
-    
-    reviewsContainer.appendChild(link_container);
+    const reviewTitle = document.createElement("div");
+    reviewTitle.classList.add("review-title");
+    const titleReviews = document.createElement("h4");
+    titleReviews.textContent = "Avis";
+    titleReviews.style.marginBottom = "20px";
+    reviewTitle.appendChild(titleReviews);
 
 
     const link = document.createElement("a");
     link.classList.add("black");
     link.href = ""
     link.textContent = "5 ★ - Voir tous les avis";
-    link_container.appendChild(link);
+    reviewTitle.appendChild(link);
 
+    bottomReview.appendChild(reviewTitle);
     // Select 3 reviews to display
     for (let i = 0; i < reviewsPerPage; i++) {
         const review = reviews[(currentReviewIndex + i) % reviews.length]; // Loop through reviews
@@ -87,6 +75,7 @@ function displayReviews() {
         // Add a fade-in effect with delay
         setTimeout(() => card.classList.add("visible"), i * 300);
     }
+    bottomReview.appendChild(reviewsContainer)
 
     // Update index for the next display
     currentReviewIndex = (currentReviewIndex + reviewsPerPage) % reviews.length;

@@ -1,4 +1,4 @@
-const reviewsContainer = document.getElementById("reviews");
+const bottomReview = document.getElementById("reviews");
 
 let currentReviewIndex = 0;
 let currentListingIndex = 0;
@@ -52,38 +52,27 @@ function generateStars(rating) {
 
 function displayReviews() {
     // Clear previous reviews
+    const reviewsContainer = document.createElement("div");
     reviewsContainer.innerHTML = "";
+    reviewsContainer.classList.add("reviews-container");
 
-    const map = document.createElement("div");
-    map.classList.add("map");
-    map.innerHTML = `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d84024.05070004266!2d-3.5388893642617334!3d48.84387691655516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48122de6cbd6245b%3A0x40ca5cd36e630e0!2sPerros-Guirec!5e0!3m2!1sfr!2sfr!4v1740747362664!5m2!1sfr!2sfr" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`;
-    reviewsContainer.appendChild(map);
+    bottomReview.classList.add("bottom-review");
+    bottomReview.innerHTML = "";
 
-
-    const button = document.createElement("button");
-    button.textContent = "Vérifier la disponibilité";
-    button.classList.add("reservation-button");
-    const linkButton = document.createElement("a");
-    linkButton.classList.add("link-button");
-    linkButton.href = "https://www.airbnb.fr/rooms/1160899826600585254?guests=1&amp;adults=1&amp;s=67&amp;unique_share_id=d4d04081-bfa3-41c7-bb94-7b516c5217f7";
-    linkButton.appendChild(button);
-    reviewsContainer.appendChild(linkButton);
-
-    const link_container = document.createElement("div");
-    link_container.classList.add("link-container");
-
-
-    const descriptionTitle = document.createElement("h4");
-    descriptionTitle.textContent = "Commentaires";
-    descriptionTitle.classList.add("comments-title");
-    link_container.appendChild(descriptionTitle);
-    reviewsContainer.appendChild(link_container);
+    const reviewTitle = document.createElement("div");
+    reviewTitle.classList.add("review-title");
+    const titleReviews = document.createElement("h4");
+    titleReviews.textContent = "Avis";
+    titleReviews.style.marginBottom = "20px";
+    reviewTitle.appendChild(titleReviews);
 
     const link = document.createElement("a");
     link.classList.add("black");
-    link.href = "https://www.airbnb.fr/rooms/1160899826600585254/reviews?search_mode=regular_search&adults=1&check_in=2025-03-03&check_out=2025-03-08&children=0&infants=0&pets=0&source_impression_id=p3_1739721997_P3hEuhNgaNwy5hKk&previous_page_section_name=1000&federated_search_id=a52c5b83-b47e-4f46-a3c3-2216590192b1"
-    link.textContent = "4,74 ★ - Voir tous les avis";
-    link_container.appendChild(link);
+    link.href = ""
+    link.textContent = "5 ★ - Voir tous les avis";
+    reviewTitle.appendChild(link);
+
+    bottomReview.appendChild(reviewTitle);
 
 
     // Select 3 reviews to display
@@ -104,6 +93,7 @@ function displayReviews() {
         // Add a fade-in effect with delay
         setTimeout(() => card.classList.add("visible"), i * 300);
     }
+    bottomReview.appendChild(reviewsContainer)
 
     // Update index for the next display
     currentReviewIndex = (currentReviewIndex + reviewsPerPage) % reviews.length;
