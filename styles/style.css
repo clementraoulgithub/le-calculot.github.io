@@ -1859,7 +1859,13 @@ body {
 
     .slide > img {
         max-height: 250px;
-        border-radius: 10px;
+        width: 110%;
+        transform: translateX(-5%);
+        border-radius: 0px;
+    }
+
+    .pagination-dots {
+        z-index: 10;
     }
 }
 
@@ -2288,6 +2294,10 @@ body {
 
     .reviews-images img {
         border-radius: 10px;
+    }
+
+    .img-containers {
+        display: none;
     }
 }
 
