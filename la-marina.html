@@ -147,27 +147,39 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <title>Avis Airbnb</title>
             <div class="airbnb-section">
+              <div class="top-image-container">
+                <div class="carousel">
+                  <button id="prevArrow" class="arrow prev">
+                    <img src="image/svg/arrow-prev.svg" alt="Icône" /></button>
+                  <button id="nextArrow" class="arrow next">
+                    <img src="image/svg/arrow-next.svg" alt="Icône" />
+                  </button>
+                  <ul>
+                    <div class="pagination-dots"></div>
+                    <li class="slide" data-active> <img src="image/la-marina-image/1.avif" alt="Airbnb embed" data-type="Vue extérieure"/><span class="carousel-caption">Vue extérieure</span></li>
+                    <li class="slide"> <img src="image/la-marina-image/3.avif" alt="Airbnb embed" data-type="Salon"/><span class="carousel-caption">Salon</span></li>
+                    <li class="slide"> <img src="image/la-marina-image/4.avif" alt="Airbnb embed" data-type="Chambre"/><span class="carousel-caption">Chambre</span></li>
+                    <li class="slide"> <img src="image/la-marina-image/2.avif" alt="Airbnb embed" data-type="Canapé convertible"/><span class="carousel-caption">Canapé convertible</span></li>
+                    <li class="slide"> <img src="image/la-marina-image/5.avif" alt="Airbnb embed" data-type="Cuisine"/><span class="carousel-caption">Cuisine</span></li>
+                    <li class="slide"> <img src="image/la-marina-image/6.avif" alt="Airbnb embed" data-type="Salle d'eau"/><span class="carousel-caption">Salle d'eau</span></li>
+                    <li class="slide"> <img src="image/la-marina-image/7.avif" alt="Airbnb embed" data-type="Piscine"/><span class="carousel-caption">Piscine</span></li>
+                  </ul>
+                  <div class="reservation-container">
+                </div>      
+                </div>
+                <!-- Images -->
+                <div class="img-containers">                <div class="reviews-images">
+                  <div class="overlay-image"><a href="https://www.lebarcares.fr/"><img src="image/la-marina-image/landscape-image/1.webp" alt="La Marina"></a></div>
+                  <div class="overlay-image"><a href="https://www.lebarcares.fr/"><img src="image/la-marina-image/landscape-image/2.avif" alt="La Marina"></a></div>
+                </div></div>
+
+                
+
+              </div>
+ 
               <div class="airbnb-content">
                 <div class="airbnb-embed">
-                  <div class="carousel">
-                    <button id="prevArrow" class="arrow prev">
-                      <img src="image/svg/arrow-prev.svg" alt="Icône" /></button>
-                    <button id="nextArrow" class="arrow next">
-                      <img src="image/svg/arrow-next.svg" alt="Icône" />
-                    </button>
-                    <ul>
-                      <div class="pagination-dots"></div>
-                      <li class="slide" data-active> <img src="image/la-marina-image/1.avif" alt="Airbnb embed" data-type="Vue extérieure"/><span class="carousel-caption">Vue extérieure</span></li>
-                      <li class="slide"> <img src="image/la-marina-image/3.avif" alt="Airbnb embed" data-type="Salon"/><span class="carousel-caption">Salon</span></li>
-                      <li class="slide"> <img src="image/la-marina-image/4.avif" alt="Airbnb embed" data-type="Chambre"/><span class="carousel-caption">Chambre</span></li>
-                      <li class="slide"> <img src="image/la-marina-image/2.avif" alt="Airbnb embed" data-type="Canapé convertible"/><span class="carousel-caption">Canapé convertible</span></li>
-                      <li class="slide"> <img src="image/la-marina-image/5.avif" alt="Airbnb embed" data-type="Cuisine"/><span class="carousel-caption">Cuisine</span></li>
-                      <li class="slide"> <img src="image/la-marina-image/6.avif" alt="Airbnb embed" data-type="Salle d'eau"/><span class="carousel-caption">Salle d'eau</span></li>
-                      <li class="slide"> <img src="image/la-marina-image/7.avif" alt="Airbnb embed" data-type="Piscine"/><span class="carousel-caption">Piscine</span></li>
-                    </ul>
-                    <div class="reservation-container">
-                  </div>      
-                  </div>
+
                   <hr class="custom-line"/>
                   <h4 style="margin-bottom: 20px;">Description</h4>
                   <div class="text-block">
@@ -316,15 +328,7 @@
                 <hr class="custom-line"/>
                 <div class="bottom-container" id="reviews"></div>
                 </div>
-                <div class="img-containers">
-                  <!-- Images -->
-
-                  <div class="reviews-images">
-                    <div class="overlay-image"><a href="https://www.lebarcares.fr/"><img src="image/la-marina-image/landscape-image/1.webp" alt="La Marina"></a></div>
-                    <div class="overlay-image"><a href="https://www.lebarcares.fr/"><img src="image/la-marina-image/landscape-image/2.avif" alt="La Marina"></a></div>
-                  </div>
-              
-              
+                <div class="res-containers">
                   <!-- Emplacement -->
                   <h4 class="map-title">Emplacement</h4>
                   <div class="map">
