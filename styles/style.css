@@ -2239,7 +2239,7 @@ body {
     background-color: #ccc; /* Gris */
     margin: 10px 0; /* Espacement */
     width: 100%; /* Prend toute la largeur */
-
+    margin-bottom: 20px;
 }
 
 .hidden {
