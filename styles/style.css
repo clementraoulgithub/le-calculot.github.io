@@ -2297,3 +2297,39 @@ body {
 .review-link {
     margin-top: 3px;
 }
+
+.overlay-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0 10px 10px 0; /* Coins arrondis */
+}
+
+.overlay-image a {
+    display: block; /* Permet à l'effet de couvrir toute l'image */
+    position: relative;
+}
+
+.overlay-image img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Overlay noir au hover */
+.overlay-image a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0); /* Transparent par défaut */
+    transition: background 0.3s ease-in-out;
+    border-radius: 0 10px 10px 0; /* Coins arrondis pour suivre l'image */
+}
+
+/* Assombrit l'image au survol */
+.overlay-image a:hover::after {
+    background: rgba(0, 0, 0, 0.2); /* Effet sombre */
+}
