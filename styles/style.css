@@ -2418,7 +2418,9 @@ font-style: normal;
     background: transparent;
     cursor: pointer;
     transition: transform 0.3s ease;
+    color: black;
 }
+
 .svg-button:hover {
     transform: scale(1.1);
 }
