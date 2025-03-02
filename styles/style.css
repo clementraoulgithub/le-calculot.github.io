@@ -1979,25 +1979,19 @@ body {
     border-radius: 30px;
     cursor: pointer;
     transition: background 0.3s, transform 0.2s;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     width: 100%;
 }
 
 @media (max-width: 768px) { /* Ajuste la largeur selon ton besoin */
-    .reservation-button {
-        position: fixed;
-        z-index: 1000;
-        bottom: 0px;
-        width: 92%;
-    }
-    .back-to-home {
-        display: none;
+    .reservation-container {
+        margin-bottom: 10px;
     }
 }
 
 
 .link-button {
-    width: 100%;
+    /* width: 100%; */
     font-family: "Barlow", serif;
 }
 
@@ -2411,3 +2405,25 @@ font-weight: 100;
 font-style: normal;
 }
 
+.share-container {
+    display: flex;
+    gap: 20px;
+    justify-content: right;
+    align-items: center;
+}
+
+.svg-button {
+    padding: 0px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.svg-button:hover {
+    transform: scale(1.1);
+}
+
+.share-container svg {
+    width: 24px;
+    height: 24px;
+}

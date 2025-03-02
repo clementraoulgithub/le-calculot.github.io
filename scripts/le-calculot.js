@@ -281,6 +281,24 @@ function showArrow() {
     });
 }
 
+
+function copyLink() {
+    const link = window.location.href;
+    navigator.clipboard.writeText(link).then(() => {
+        alert("Lien copié dans le presse-papiers");
+    }).catch(err => {
+        console.error("Erreur de copie :", err);
+    });
+}
+
+function shareByEmail() {
+    const link = window.location.href;
+    const subject = encodeURIComponent("Location de vacances à Perros-Guirec");
+    const body = encodeURIComponent("Bonjour,\n\nJe voulais partager ce site avec toi pour des superbes vacances : " + link + "\n\nBonne découverte !");
+    
+    window.location.href = `mailto:?subject=${subject}&body=${body}`;
+}
+
 document.addEventListener("readystatechange", (event) => {
     if (document.readyState === "interactive" || document.readyState === "complete") {
         document.body.style.visibility = "visible";
