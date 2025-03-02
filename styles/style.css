@@ -1975,7 +1975,7 @@ body {
     font-weight: bold;
     padding: 12px 24px;
     border: none;
-    border-radius: 10px;
+    border-radius: 30px;
     cursor: pointer;
     transition: background 0.3s, transform 0.2s;
     margin-bottom: 20px;
