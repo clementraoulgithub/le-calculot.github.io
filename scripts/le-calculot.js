@@ -223,35 +223,14 @@ function createCarousel() {
     }
 
     if (isMobile) {
-        let startX = 0;
-        let endX = 0;
-    
         slides.forEach((slide) => {
-            slide.addEventListener("touchstart", (e) => {
-                startX = e.touches[0].clientX; // Position du toucher au départ
-            });
-    
-            slide.addEventListener("touchmove", (e) => {
-                endX = e.touches[0].clientX; // Position du toucher en mouvement
-            });
-    
-            slide.addEventListener("touchend", () => {
-                let diffX = endX - startX; // Différence entre début et fin du swipe
-    
-                if (diffX > 50) {
-                    // Swipe vers la droite -> slide précédent
-                    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-                } else if (diffX < -50) {
-                    // Swipe vers la gauche -> slide suivant
-                    currentIndex = (currentIndex + 1) % slides.length;
-                }
-    
+            slide.addEventListener("click", () => {
+                currentIndex = (currentIndex + 1 + slides.length) % slides.length;
                 showSlide(currentIndex);
                 updateCarousel();
             });
         });
     }
-    
 
     prevArrow.addEventListener("click", () => {
         currentIndex = (currentIndex - 1 + slides.length) % slides.length;
