@@ -66,6 +66,7 @@ h1, .h1 {
 p {
     margin-top: 0;
     margin-bottom: 16px;
+    font-family: "Barlow";
 }
 
  ul {
@@ -462,6 +463,10 @@ textarea.form-control {
     margin-bottom: 0;
     list-style: none;
     gap: 1rem;
+}
+
+.nav-link span {
+    font-family: "Barlow", serif;
 }
 
 .nav-link {
@@ -1931,3 +1936,9 @@ body {
     font-weight: 100; /* Ultra fin */
     font-style: normal;
   }
+
+.barlow-thin {
+font-family: "Barlow", serif;
+font-weight: 100;
+font-style: normal;
+}

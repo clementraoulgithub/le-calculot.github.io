@@ -462,6 +462,10 @@ button:not(:disabled):not(.o_wysiwyg_loader), [type="button"]:not(:disabled):not
     border: 0;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
+
+.nav-link span {
+    font-family: "Barlow", serif;
+}
   
 .nav-link.active {
     background-color: #f0f0f0;
@@ -1992,6 +1996,7 @@ body {
 
 .link-button {
     width: 100%;
+    font-family: "Barlow", serif;
 }
 
 .reservation-button:hover {
@@ -2200,6 +2205,10 @@ body {
     min-width: 200px;
 }
 
+.feature span {
+    font-family: "Barlow", sans-serif;
+}
+
 .feature svg {
     width: 24px;
     height: 24px;
@@ -2384,9 +2393,9 @@ body {
     font-style: normal;
   }
   
-  .barlow-thin {
-    font-family: "Barlow", serif;
-    font-weight: 100;
-    font-style: normal;
-  }
+.barlow-thin {
+font-family: "Barlow", serif;
+font-weight: 100;
+font-style: normal;
+}
 
