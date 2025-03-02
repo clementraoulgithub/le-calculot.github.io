@@ -1940,6 +1940,7 @@ body {
     justify-content: center;
     align-items: center;
     pointer-events: none;
+    z-index: 10;
 }
 
 .dot {
@@ -2380,6 +2381,16 @@ body {
 .overlay-image-top a:hover::after, .overlay-image-bottom a:hover::after {
     background: rgba(0, 0, 0, 0.2); /* Effet sombre */
 }
+
+.slide[data-active] img {
+    display: block; 
+    transition: filter 0.3s ease-in-out;
+}
+
+.slide[data-active] img:hover {
+    filter: brightness(80%); /* Assombrit l'image */
+}
+
 
 .top-image-container {
     display: flex;
