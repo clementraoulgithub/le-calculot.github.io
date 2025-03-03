@@ -2448,8 +2448,9 @@ font-style: normal;
 .share-container {
     display: flex;
     gap: 20px;
-    justify-content: right;
+    justify-content: flex-start;
     align-items: center;
+    width: 100%;
 }
 
 .svg-button {
@@ -2468,4 +2469,29 @@ font-style: normal;
 .share-container svg {
     width: 24px;
     height: 24px;
+}
+
+.svg-text-container-left, .svg-text-container-right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.svg-text-container-left {
+    margin-right: auto;
+}
+
+.svg-text-container-left img, .svg-text-container-right img {
+    width: 24px;
+    height: 24px;
+}
+
+@media (max-width: 768px) {
+    .share-container {
+        flex-direction: column;
+    }
+
+    .svg-text-container-left {
+        margin-right: 0;
+    }
 }
