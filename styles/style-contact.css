@@ -1726,27 +1726,50 @@ font-style: normal;
 }
 
 .send-button {
-    background-color: #ff5a5f; /* Rouge Airbnb */
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 30px;
+    align-items: center;
+    background-color: #141f2e;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: rgba(255, 255, 255, 0.85);
     cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
-    margin-bottom: 20px;
-    font-family: "Barlow", serif;
-}
-
-.send-button:hover {
-    background-color: #e0484d;
-    color: white;
-}
-
-
-.send-button:active {
-    background-color: #c23d42;
-    transform: scale(0.95);
-    color: white;
-}
+    display: inline-flex;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 1.25;
+    margin: 0;
+    min-height: 3rem;
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: auto;
+  }
+  
+  .send-button:hover,
+  .send-button:focus {
+    border-color: rgba(0, 0, 0, 0.28);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    color: rgba(255, 255, 255, 0.85);
+    /* color: rgba(0, 0, 0, 0.65); */
+  }
+  
+  .send-button:hover {
+    transform: translateY(-1px);
+    background-color: #2d394a;
+  }
+  
+  .send-button:active {
+    background-color: #F0F0F1;
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+    color: rgba(0, 0, 0, 0.65);
+    transform: translateY(0);
+  }
