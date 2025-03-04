@@ -1865,9 +1865,9 @@ body {
 
     .slide > img {
         max-height: 250px;
-        width: 110%;
-        transform: translateX(-5%);
-        border-radius: 0px;
+        /* width: 110%;
+        transform: translateX(-5%); */
+        border-radius: 10px;
     }
 
     .pagination-dots {
