@@ -2485,4 +2485,8 @@ font-style: normal;
     .svg-text-container-left {
         margin-right: 0;
     }
+
+    .mobile-hidden {
+        display: none;
+    }
 }
