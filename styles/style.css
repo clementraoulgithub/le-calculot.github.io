@@ -2503,3 +2503,7 @@ nav svg {
         display: none !important;
     }
   }
+
+  .disabled-link {
+    pointer-events: none;
+  }
