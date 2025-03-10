@@ -2507,3 +2507,21 @@ nav svg {
   .disabled-link {
     pointer-events: none;
   }
+
+.logo {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.logo h3 {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 120px;
+}
+.logo img {
+    position: absolute;
+    width: 120px;
+    height: auto;
+}
+
