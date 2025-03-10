@@ -216,6 +216,31 @@
           </div></a>
           </div>
           <style>
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(50px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            .logements-container a:nth-child(1) .logement {
+                animation-delay: 0s;
+            }
+
+            .logements-container a:nth-child(2) .logement {
+                animation-delay: 0.6s;
+            }
+
+            .logements-container a:nth-child(3) .logement {
+                animation-delay: 1.2s;
+            }
+            .logements-container a:nth-child(4) .logement {
+                animation-delay: 1.8s;
+            }
+
             .logement-title {
               display: flex;
               align-items: stretch;
@@ -251,12 +276,14 @@
                 overflow: hidden;
                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
                 text-align: center;
-                transition: transform 0.3s ease-in-out;
                 position: relative;
+                opacity: 0;
+                animation: fadeInUp 0.8s ease-out forwards;
+                will-change: opacity, transform;
             }
-    
-            .logement:hover {
-                transform: scale(1.02);
+
+            .logement {
+                transition: transform 0.3s ease-in-out;
             }
     
             .logement img {
@@ -355,6 +382,11 @@
               .pt48 {
                 padding-top: 10px !important;
               }
+              .logement {
+                opacity: 1;
+                animation: none;
+              }
+
             }
 
         </style>
