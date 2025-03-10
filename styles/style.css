@@ -2490,3 +2490,16 @@ font-style: normal;
         display: none;
     }
 }
+
+nav svg {
+    margin-right: 3px; /* Espace entre l'icône et le texte */
+    vertical-align: middle; /* Aligne l'icône avec le texte */
+    height: 24px;
+    width: 24px;
+  }
+
+  @media (max-width: 768px) {
+    .nav-item span {
+        display: none !important;
+    }
+  }
