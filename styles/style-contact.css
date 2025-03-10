@@ -57,6 +57,23 @@ h1, .h1 {
     font-size: calc(1.425rem + 2.1vw);
 }
 
+h3, .h3 {
+    font-size: 2rem;
+    font-family:  "Roboto", "Elsie", "Unicode Support Noto", serif;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 0rem;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-weight: 500;
+}
+
+@media (max-width: 1200px) {
+    h3, .h3 {
+        font-size: calc(1.325rem + 0.9vw) !important;
+    }
+}
+
 @media (min-width: 1200px) {
     h1, .h1 {
         font-size: 3rem;
@@ -1203,6 +1220,10 @@ html, body {
 
 .pt40 {
     padding-top: 40px !important;
+}
+
+.pt20 {
+    padding-top: 20px !important;
 }
 
 .pb40 {
