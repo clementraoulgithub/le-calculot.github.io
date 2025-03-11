@@ -194,13 +194,16 @@
           <div class="container logements-container">
             <!-- <div class="logement-title-mobile"><h4>La Bretagne</h4></div> -->
             <a href="le-calculot.html"><div class="logement">
-                <img src="image/le-calculot-image/1.avif" alt="Le calculot">
+                <img src="image/le-calculot-image/1.avif" alt="Le calculot"><span class="wip"><div class="capacite"><div class="left">
+                  <img src="image/svg/person.svg" alt="Capacité">
+                  <strong>2</strong></div>
+              </div></span>
                 <div class="info">
                   <div class="capacite">
-                    <div class="left">
+                    <!-- <div class="left">
                         <img src="image/svg/person.svg" alt="Capacité">
                         <strong>2</strong>
-                    </div>
+                    </div> -->
                     <!-- <div class="right">
                       <strong>4.74</strong>
                         <img src="image/svg/star.svg" alt="Capacité">
@@ -211,13 +214,16 @@
                 </div>
             </div></a>
             <a href="le-cosy.html"><div class="logement">
-                <img src="image/le-cosy-image/1.avif" alt="Le cosy">
+                <img src="image/le-cosy-image/1.avif" alt="Le cosy"><span class="wip"><div class="capacite"><div class="left">
+                  <img src="image/svg/person.svg" alt="Capacité">
+                  <strong>2</strong></div>
+              </div></span>
                 <div class="info">
                   <div class="capacite">
-                    <div class="left">
+                    <!-- <div class="left">
                         <img src="image/svg/person.svg" alt="Capacité">
                         <strong>2</strong>
-                    </div>
+                    </div> -->
                     <!-- <div class="right">
                         <strong>4.73</strong>
                         <img src="image/svg/star.svg" alt="Capacité">
@@ -228,14 +234,17 @@
                 </div>
             </div></a>
             <!-- <div class="logement-title-mobile"><h4>L'Occitanie</h4></div> -->
-            <a href="la-marina.html"><div class="logement">
+            <a href="la-marina.html"><div class="logement"><span class="wip"><div class="capacite"><div class="left">
+              <img src="image/svg/person.svg" alt="Capacité">
+              <strong>4</strong></div>
+          </div></span>
                 <img src="image/la-marina-image/1.avif" alt="La marina">
                 <div class="info">
                   <div class="capacite">
-                    <div class="left">
+                    <!-- <div class="left">
                         <img src="image/svg/person.svg" alt="Capacité">
                         <strong>4</strong>
-                    </div>
+                    </div> -->
                     <!-- <div class="right">
                         <strong>5</strong>
                         <img src="image/svg/star.svg" alt="Capacité">
@@ -249,10 +258,10 @@
               <img src="image/le-hublot-image/1.avif" alt="Le hublot">
               <div class="info">
                 <div class="capacite">
-                  <div class="left">
+                  <!-- <div class="left">
                       <img src="image/svg/person.svg" alt="Capacité">
                       <strong>2</strong>
-                  </div>
+                  </div> -->
               </div>
                   <h3>Le hublot</h3>
                   <p>Le barcares, France</p>
@@ -340,6 +349,7 @@
               height: 100%;
               padding: 0px;
               position: relative;
+              padding-top: 10px;
             }
     
             .logement h3 {
@@ -369,7 +379,7 @@
               top: 10px;
               right: 0;
               background-color: white;
-              color: #555;
+              color: #000000;
               padding: 5px 15px;
               border-radius: 20px 0 0 20px;
               font-weight: bold;
@@ -378,8 +388,8 @@
             }
 
             .capacite {
-              color: #555;
-              padding: 8px 12px; /* Augmente l'espacement interne */
+              color: #000000;
+              /* padding: 8px 12px; */
               border-radius: 10px;
               font-weight: bold;
               font-size: 14px;
@@ -394,9 +404,9 @@
 
             .capacite img {
               display: inline; /* Affiche l'icône */
-              width: 20px;
-              height: 20px;
-              margin-top: -5px;
+              width: 15px;
+              height: 15px;
+              margin-top: -3px;
             }
 
             .right img {
