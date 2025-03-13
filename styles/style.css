@@ -1852,19 +1852,6 @@ body {
     z-index: 1000;
 }
 
-.back-to-home {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 10px 15px;
-    border-radius: 50%;
-    font-size: 20px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-    z-index: 1000;
-}
 
 .arrow-lightbox {
     width: 3rem;
