@@ -237,6 +237,7 @@ button:not(:disabled):not(.o_wysiwyg_loader), [type="button"]:not(:disabled):not
     font-size: 1.125rem;
     font-weight: 300;
     margin-top: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .display-1 {
