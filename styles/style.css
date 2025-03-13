@@ -1837,8 +1837,17 @@ body {
 }
 
 .arrow-index {
+    display: flex; /* Assure un centrage correct */
+    align-items: center;
+    justify-content: center;
     width: 2rem;
     height: 2rem;
+    min-width: 2rem; /* Empêche l’étirement */
+    min-height: 2rem; /* Empêche l’étirement */
+    line-height: 2rem; /* Corrige les problèmes d’alignement */
+    text-align: center;
+    
+    /* Styles existants */
     z-index: 2;
     background: none;
     border: none;
@@ -1849,9 +1858,7 @@ body {
     cursor: pointer;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.74);
-    transform: translateY(-50%); 
-    align-items: center !important;
-    justify-content: center !important;
+    transform: translateY(-50%);
 }
 
 .arrow-lightbox {
@@ -1883,7 +1890,6 @@ body {
 .arrow-index img {
     width: 1rem !important;
     height: 1rem !important;
-    margin-bottom: 22px;
 }
 
 
