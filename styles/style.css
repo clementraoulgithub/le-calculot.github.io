@@ -1837,28 +1837,33 @@ body {
 }
 
 .arrow-index {
-    display: flex; /* Assure un centrage correct */
-    align-items: center;
-    justify-content: center;
-    width: 2rem;
-    height: 2rem;
-    min-width: 2rem; /* Empêche l’étirement */
-    min-height: 2rem; /* Empêche l’étirement */
-    line-height: 2rem; /* Corrige les problèmes d’alignement */
-    text-align: center;
-    
-    /* Styles existants */
-    z-index: 2;
-    background: none;
-    border: none;
-    position: absolute;
-    font-size: 2rem;
     top: 60%;
-    color: rgba(255, 255, 255, .3);
-    cursor: pointer;
+    transform: translateY(-50%); 
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 3px 10px;
     border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
     background-color: rgba(255, 255, 255, 0.74);
-    transform: translateY(-50%);
+    border: none;
+    z-index: 1000;
+}
+
+.back-to-home {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    z-index: 1000;
 }
 
 .arrow-lightbox {
