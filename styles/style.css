@@ -2011,7 +2011,7 @@ body {
 }
 
 .pagination-dots-index {
-    bottom: 1rem;
+    bottom: 0.5rem;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
