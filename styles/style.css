@@ -1748,6 +1748,11 @@ body {
     width: 67%;
 }
 
+.carousel-index {
+    position: relative;
+    width: 100%;
+}
+
 .carousel-caption {
     display: block;
     font-weight: 300;
@@ -1770,9 +1775,27 @@ body {
     display: none;
 }
 
+.slide-index {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    inset: 0;
+    display: none;
+}
+
 .slide[data-active] {
     opacity: 1;
     display: block;
+}
+
+.slide-index[data-active] {
+    opacity: 1;
+    display: block;
+}
+
+.carousel-index ul {
+    padding: 0px !important;
+    margin: 0px !important;
 }
 
 .slide > img {
@@ -1783,6 +1806,14 @@ body {
     object-position: center;
     border-radius: 10px 0 0 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.slide-index > img {
+    display: block;
+    height: 400px;
+    width: 100% !important;
+    object-fit: cover;
+    object-position: center;
 }
 
 
@@ -1803,6 +1834,24 @@ body {
     transform: translateY(-50%); 
     align-items: center;
     justify-content: center;
+}
+
+.arrow-index {
+    width: 2rem;
+    height: 2rem;
+    z-index: 2;
+    background: none;
+    border: none;
+    position: absolute;
+    font-size: 2rem;
+    top: 60%;
+    color: rgba(255, 255, 255, .3);
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.74);
+    transform: translateY(-50%); 
+    align-items: center !important;
+    justify-content: center !important;
 }
 
 .arrow-lightbox {
@@ -1831,7 +1880,14 @@ body {
 }
 
 
-.arrow:hover {
+.arrow-index img {
+    width: 1rem !important;
+    height: 1rem !important;
+    margin-bottom: 22px;
+}
+
+
+.arrow:hover, .arrow-index:hover {
     transform: translateY(-50%) scale(1.1);  /* Agrandir au survol sans bouger verticalement */
     transform-origin: center;  /* Assure que l'agrandissement se fait à partir du centre */
     background-color: rgb(255, 255, 255);
@@ -1847,6 +1903,10 @@ body {
     right: 2%;
 }
 
+.arrow-index.next {
+    right: 2%;
+}
+
 .arrow-lightbox.next {
     right: 10%;
 }
@@ -1854,6 +1914,11 @@ body {
 .arrow.prev {
     left: 2%;
 }
+
+.arrow-index.prev {
+    left: 2%;
+}
+
 
 .arrow-lightbox.prev  {
     left: 10%;
@@ -1945,7 +2010,20 @@ body {
     z-index: 10;
 }
 
-.dot {
+.pagination-dots-index {
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    z-index: 10;
+}
+
+
+.dot, .dot-index  {
     width: 8px;
     height: 8px;
     margin: 0 5px;
@@ -1956,7 +2034,7 @@ body {
 }
 
 
-.dot.active {
+.dot.active, .dot-index.active {
     background-color: #ffffff;
     transform: scale(1.4);
 }
