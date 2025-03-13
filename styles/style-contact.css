@@ -204,6 +204,7 @@ textarea {
 
 .bottom {
     margin-bottom: 10px;
+    text-shadow: none;
 }
 
 .img-fluid {
