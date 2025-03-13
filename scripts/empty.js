@@ -1,3 +1,33 @@
+function showElementsOnHover(carouselContainer) {
+    let nextArrow = carouselContainer.querySelector('.next');
+    let prevArrow = carouselContainer.querySelector('.prev');
+
+    function checkViewport() {
+        return window.innerWidth <= 768; // Détecte si on est en mode mobile
+    }
+
+    function showElements() {
+        nextArrow.style.opacity = '1';
+        prevArrow.style.opacity = '1';
+    }
+
+    function hideElements() {
+        if (!checkViewport()) { // Seulement sur desktop
+            nextArrow.style.opacity = '0';
+            prevArrow.style.opacity = '0';
+        }
+    }
+
+    // Toujours visible sur mobile
+    if (checkViewport()) {
+        showElements();
+    }
+
+    carouselContainer.addEventListener('mouseover', showElements);
+    carouselContainer.addEventListener('mouseout', hideElements);
+}
+
+
 function createCarousel(carouselContainer) {
     const slides = carouselContainer.querySelectorAll(".slide-index");
     const prevArrow = carouselContainer.querySelector(".prev");
@@ -77,3 +107,8 @@ document.addEventListener("readystatechange", (event) => {
 });
 
 
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".carousel-index").forEach(carousel => {
+        showElementsOnHover(carousel);
+    });
+});

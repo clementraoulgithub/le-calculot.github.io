@@ -1842,7 +1842,7 @@ body {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
-    padding: 3px 10px;
+    padding: 0px 7px;
     border-radius: 50%;
     font-size: 20px;
     text-decoration: none;
@@ -1850,7 +1850,17 @@ body {
     background-color: rgba(255, 255, 255, 0.74);
     border: none;
     z-index: 1000;
+    opacity: 0;
 }
+
+@media (max-width: 768px) {
+    .arrow-index {
+        padding: 3px 10px;
+        opacity: 1;
+    }
+}
+
+
 
 
 .arrow-lightbox {
@@ -2021,9 +2031,19 @@ body {
 }
 
 
-.dot, .dot-index  {
+.dot  {
     width: 8px;
     height: 8px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+.dot-index  {
+    width: 6px;
+    height: 6px;
     margin: 0 5px;
     background-color: #bbb;
     border-radius: 50%;
