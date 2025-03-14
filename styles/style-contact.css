@@ -506,6 +506,12 @@ textarea.form-control {
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
 
+@media (max-width: 768px) {
+    .nav-link  {
+        padding: 5px 5px 5px 8px;
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
     .nav-link {
         transition: none;
