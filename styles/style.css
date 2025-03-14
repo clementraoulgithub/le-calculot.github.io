@@ -1901,6 +1901,14 @@ body {
     background-color: rgb(255, 255, 255);
 }
 
+@media (hover: none) {
+    .arrow-index:active {
+        transform: translateY(-50%) scale(1.1);
+        transform-origin: center;
+        background-color: rgb(255, 255, 255);
+    }
+}
+
 .arrow-lightbox:hover {
     transform-origin: center;
     transform: translateY(-50%) scale(1.1);
