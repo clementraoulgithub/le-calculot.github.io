@@ -209,31 +209,14 @@
           </div>
           <div class="container logements-container">
             <!-- <div class="logement-title-mobile"><h4>La Bretagne</h4></div> -->
-            <a href="#"><div class="logement">
-              <div class="video-embarquee">
-                <iframe id="widget_autocomplete_preview"  width="150" height="300" frameborder="0" src="https://meteofrance.com/widget/prevision/221680##3D6AA2" title="Prévisions Perros-Guirec par Météo-France"> </iframe>              </div>
-
-                <div class="info">
-                  <div class="capacite">
-                    <div class="left">
-                    </div>
-                </div>
-                    <h3>Meteo</h3>
-                    <p>Perros-Guirec</p>
-                </div>
-            </div></a>
-            <a href="#"><div class="logement">
-              <div class="video-embarquee">
-                <iframe id="widget_autocomplete_preview"  width="150" height="300" frameborder="0" src="https://meteofrance.com/widget/prevision/660170##3D6AA2" title="Prévisions Le Barcarès par Météo-France"> </iframe>              </div>
-                <div class="info">
-                  <div class="capacite">
-                    <div class="left">
-                    </div>
-                </div>
-                    <h3>Meteo</h3>
-                    <p>Le barcares</p>
-                </div>
-            </div></a>
+                <a class="weatherwidget-io" href="https://forecast7.com/fr/48d82n3d44/perros-guirec/" data-label_1="PERROS-GUIREC" data-label_2="METEO" data-theme="original" >PERROS-GUIREC METEO</a>
+                <script>
+                !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+                </script>
+                <a class="weatherwidget-io" href="https://forecast7.com/fr/42d793d04/le-barcares/" data-label_1="LE BARCARÈS" data-label_2="METEO" data-theme="original" >LE BARCARÈS METEO</a>
+                <script>
+                !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+                </script>           
           </div>
           <style>
             @keyframes fadeInUp {
@@ -405,6 +388,9 @@
                 opacity: 1;
                 animation: none;
               }
+              .weatherwidget-io {
+                margin-top: 50px !important;
+            }
 
             }
 
