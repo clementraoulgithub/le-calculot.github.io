@@ -1901,10 +1901,14 @@ body {
     background-color: rgb(255, 255, 255);
 }
 
-@media (hover: none) {
+@media (max-width: 768px) {
+    .arrow-index:hover {
+        transform: translateY(-50%) scale(1);
+        background-color: rgba(255, 255, 255, 0.74);
+    }
     .arrow-index:active {
-        transform: translateY(-50%) scale(1.1);
-        transform-origin: center;
+        transform: translateY(-50%) scale(1.1);  /* Agrandir au survol sans bouger verticalement */
+        transform-origin: center;  /* Assure que l'agrandissement se fait à partir du centre */
         background-color: rgb(255, 255, 255);
     }
 }
