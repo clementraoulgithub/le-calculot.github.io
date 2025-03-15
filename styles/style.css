@@ -1898,6 +1898,7 @@ body {
 .arrow-index img {
     width: 1rem !important;
     height: 1rem !important;
+    margin-bottom: 2px;
 }
 
 
