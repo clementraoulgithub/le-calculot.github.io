@@ -2651,6 +2651,7 @@ width: 100%;
 height: 118%;
 z-index: 1;
 clip-path: inset(0 0 15% 0); 
+
 }
   
 video {
@@ -2677,4 +2678,19 @@ transform: scaleX(-1);
     left: 0;
     width: 100%;
     height: 100%;
+  }
+
+  .svg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('image/fx/connections3_.svg?c5=%23FFFFFF');
+    transform: scaleX(-1);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    pointer-events: none; /* Pour éviter que le SVG bloque les interactions */
+    z-index: 2; /* S'assurer que c'est au-dessus de la vidéo */
   }
